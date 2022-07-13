@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
             val name = Name.text.toString()
             val secondName = SecondName.text.toString() // проверить
             val age: Int = Age.text.toString().toIntOrNull() ?: 0
-            if (checkName(name) && checSecondName(secondName) && checAge(age)) {
+            if (checkName(name) && checkSecondName(secondName) && checkAge(age)) {
                 val person = User(name, secondName, age)
                 if (users.contains(person)) {
                     Toast.makeText(this, "Такой элемент уже есть", Toast.LENGTH_SHORT).show()
@@ -34,31 +34,32 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun checkName(name: String): Boolean {
-        if (name == "") {
-            Toast.makeText(this, "Name Null", Toast.LENGTH_SHORT).show()
-            return false
-        } else {
-            return true
-        }
+
+   private fun checkName(name: String): Boolean {
+       return if (name == "") {
+           Toast.makeText(this, "Name Null", Toast.LENGTH_SHORT).show()
+           false
+       } else {
+           true
+       }
     }
 
     /// убрать одну fun
-    fun checSecondName(secondName: String): Boolean {
-        if (secondName == "") {
+    private fun checkSecondName(secondName: String): Boolean {
+        return if (secondName == "") {
             Toast.makeText(this, "Second Name Null", Toast.LENGTH_SHORT).show()
-            return false
+            false
         } else {
-            return true
+            true
         }
     }
 
-    fun checAge(age: Int): Boolean {
-        if (age == 0) {
+    private fun checkAge(age: Int): Boolean {
+        return if (age == 0) {
             Toast.makeText(this, "Age Null", Toast.LENGTH_SHORT).show()
-            return false
+            false
         } else {
-            return true
+            true
         }
     }
 }
