@@ -34,7 +34,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
    private fun checkName(name: String): Boolean {
        return if (name == "") {
            Toast.makeText(this, "Name Null", Toast.LENGTH_SHORT).show()
