@@ -43,6 +43,7 @@ class MainActivity : AppCompatActivity() {
        }
     }
 
+
     /// убрать одну fun
     private fun checkSecondName(secondName: String): Boolean {
         return if (secondName == "") {
