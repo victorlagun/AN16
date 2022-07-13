@@ -1,0 +1,47 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "AN16"
+include ':app'
+
+def modules = [
+        ':app'                           : 'app',
+
+        ':bondarenko_vadim-homework01'   : 'bondarenko_vadim/homework01',
+
+        ':edikhanov_egor-homework01'     : 'edikhanov_egor/homework01',
+
+        ':eliseyev_aleksandr-homework01' : 'eliseyev_aleksandr/homework01',
+
+        ':lazovskiy_anton-homework01'    : 'lazovskiy_anton/homework01',
+
+        ':miseyko_denis-homework01'      : 'miseyko_denis/homework01',
+
+        ':shcherbakov_bogdan-homework01' : 'shcherbakov_bogdan/homework01',
+
+        ':staroselets_elena-homework01'  : 'staroselets_elena/homework01',
+
+        ':tsybulkina_darya-homework01'   : 'tsybulkina_darya/homework01',
+
+        ':ventserev_aleksandr-homework01': 'ventserev_aleksandr/homework01',
+
+        ':verevka_dmitry-homework01'     : 'verevka_dmitry/homework01',
+
+        ':lagun_victor-homework01'       : 'lagun_victor/homework01',
+]
+
+modules.forEach { name, path ->
+    include(name)
+    project(name).projectDir = file(path)
+}
