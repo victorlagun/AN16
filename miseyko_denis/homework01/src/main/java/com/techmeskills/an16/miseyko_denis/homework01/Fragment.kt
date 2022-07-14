@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import com.techmeskills.an16.miseyko_denis.homework01.R.*
 import kotlinx.android.synthetic.main.fragment.*
 import java.lang.Integer.parseInt
 
