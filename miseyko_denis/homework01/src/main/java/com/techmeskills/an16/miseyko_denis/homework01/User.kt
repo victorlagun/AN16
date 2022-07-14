@@ -1,4 +1,4 @@
-package com.example.an16tms
+package com.techmeskills.an16.miseyko_denis.homework01
 
 data class User (val name: String, val secondName: String, val age: Int){
 

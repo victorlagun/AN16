@@ -1,4 +1,4 @@
-package com.example.an16tms
+package com.techmeskills.an16.miseyko_denis.homework01
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import com.example.an16tms.Fragment.Companion.users
+import com.example.an16tms.R
 import kotlinx.android.synthetic.main.fragment.*
 import java.lang.Integer.parseInt
 
