@@ -2,7 +2,7 @@ package com.techmeskills.an16.miseyko_denis.homework01
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.an16tms.R
+import com.techmeskills.an16.miseyko_denis.homework01.R.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
