@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragment"
+    tools:context="com.techmeskills.an16.miseyko_denis.homework01.Fragment"
     android:orientation="vertical">
 
     <EditText
@@ -18,14 +18,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/secondName"
-        android:inputType="textCapWords" />
+        android:inputType="textCapWords"
+        android:minHeight="48dp" />
 
     <EditText
         android:id="@+id/age"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/age"
-        android:inputType="number" />
+        android:inputType="number"
+        android:minHeight="48dp" />
 
     <Button
         android:id="@+id/button"
