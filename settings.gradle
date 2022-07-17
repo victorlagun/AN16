@@ -39,6 +39,8 @@ def modules = [
         ':verevka_dmitry-homework01'     : 'verevka_dmitry/homework01',
 
         ':lagun_victor-homework01'       : 'lagun_victor/homework01',
+
+        ':template-homework'             : 'template/homework',
 ]
 
 modules.forEach { name, path ->
