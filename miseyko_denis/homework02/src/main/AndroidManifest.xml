@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.techmeskills.an16.miseyko_denis.homework02">
+
+    <application
+        android:theme="@style/Theme.AN16"
+        tools:ignore="MissingApplicationIcon">
+    </application>
+
+</manifest>
