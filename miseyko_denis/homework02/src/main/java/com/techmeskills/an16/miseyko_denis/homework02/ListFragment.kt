@@ -52,7 +52,7 @@ class ListFragment : Fragment() {
     }
 
     companion object {
-        val data = listOf<User>().toMutableList()
+        val data = mutableListOf<User>()
         const val RESULT = "result"
 
         fun newInstance() = ListFragment()
