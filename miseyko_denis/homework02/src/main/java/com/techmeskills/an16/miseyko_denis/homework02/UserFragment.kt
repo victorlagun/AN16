@@ -64,7 +64,7 @@ class UserFragment : Fragment() {
 
 
     companion object {
-
+        @JvmStatic
         fun newInstance() = UserFragment()
     }
 
