@@ -54,7 +54,7 @@ class ListFragment : Fragment() {
     companion object {
         val data = mutableListOf<User>()
         const val RESULT = "result"
-
+        @JvmStatic
         fun newInstance() = ListFragment()
     }
 
