@@ -4,10 +4,17 @@
     package="com.techmeskills.an16.miseyko_denis.homework01">
 
     <application
-        android:theme="@style/Theme.AN16"
-        tools:ignore="MissingApplicationIcon">
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.An16tms"
+        tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name="com.techmeskills.an16.miseyko_denis.homework01.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
