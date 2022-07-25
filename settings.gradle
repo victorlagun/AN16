@@ -19,6 +19,8 @@ def modules = [
         ':app'                           : 'app',
 
         ':bondarenko_vadim-homework01'   : 'bondarenko_vadim/homework01',
+        ':bondarenko_vadim-homework02'   : 'bondarenko_vadim/homework02',
+        ':bondarenko_vadim-homework03'   : 'bondarenko_vadim/homework03',
 
         ':edikhanov_egor-homework01'     : 'edikhanov_egor/homework01',
 
