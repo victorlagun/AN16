@@ -47,6 +47,13 @@ class GameViewModel:ViewModel() {
         }
     }
 
+    private fun nextWord():Boolean{
+        return if (currentWordCount < MAX_NO_OF_WORDS){
+            getNextWord()
+            true
+        } else false
+    }
+
     override fun onCleared() {
         super.onCleared()
         Log.d("GameFragment", "GameViewModel destroyed!")

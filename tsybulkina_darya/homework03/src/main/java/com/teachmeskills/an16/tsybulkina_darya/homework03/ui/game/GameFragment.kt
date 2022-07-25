@@ -25,6 +25,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.android.unscramble.R
 import com.example.android.unscramble.databinding.GameFragmentBinding
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.android.synthetic.main.game_fragment.*
 
 /**
@@ -117,12 +118,12 @@ class GameFragment : Fragment() {
         textView_unscrambled_word.text = viewModel.currentScrambledWord
     }
 
-//    private fun showFinalScoreDialog() {
-//        MaterialAlertDialogBuilder(requireContext())
-//            .setTitle("Title").setMessage("Message").setCancelable(false)
-//            .setNegativeButton(getString(R.string.exit)) { _, _ -> exitGame() }
-//            .setPositiveButton(getString(R.string.play_again)) { _, _ -> restartGame() }.show()
-//    }
+    private fun showFinalScoreDialog() {
+        MaterialAlertDialogBuilder(requireContext())
+            .setTitle(getString(R.string.congratulations)).setMessage(getString(R.string.you_scored, viewModel.score)).setCancelable(false)
+            .setNegativeButton(getString(R.string.exit)) { _, _ -> exitGame() }
+            .setPositiveButton(getString(R.string.play_again)) { _, _ -> restartGame() }.show()
+    }
 
 
 }
