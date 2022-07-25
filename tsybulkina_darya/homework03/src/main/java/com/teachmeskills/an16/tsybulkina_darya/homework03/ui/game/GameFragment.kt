@@ -67,6 +67,7 @@ class GameFragment : Fragment() {
         //   binding.skip.setOnClickListener { onSkipWord() }
         // Update the UI
         submit.setOnClickListener{onSubmitWord()}
+        skip.setOnClickListener{onSkipWord()}
         updateNextWordOnScreen()
         binding.score.text = getString(R.string.score, 0)
         binding.wordCount.text = getString(
@@ -123,6 +124,15 @@ class GameFragment : Fragment() {
             }
         }else {
             setErrorTextField(true)
+        }
+    }
+
+    private fun onSkipWord(){
+        if (viewModel.nextWord()) {
+            setErrorTextField(false)
+            updateNextWordOnScreen()
+        } else {
+            showFinalScoreDialog()
         }
     }
 
