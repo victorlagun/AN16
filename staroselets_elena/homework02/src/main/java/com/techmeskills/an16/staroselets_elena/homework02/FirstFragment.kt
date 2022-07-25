@@ -82,6 +82,7 @@ class FirstFragment : Fragment() {
         }
     }
 
+
     private fun isEmptyList(){
         if(userList.size==0){
             textEmptyList.visibility=VISIBLE
