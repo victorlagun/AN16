@@ -3,7 +3,7 @@ package com.teachmeskills.an16.tsybulkina_darya.homework03.ui.game
 import android.util.Log
 import androidx.lifecycle.ViewModel
 
-class GameViewModel:ViewModel() {
+class GameViewModel : ViewModel() {
 
     private var _score = 0
     val score: Int
@@ -13,15 +13,15 @@ class GameViewModel:ViewModel() {
     val currentWordCount: Int
         get() = _currentWordCount
 
-    private lateinit var _currentScrambledWord :String
+    private lateinit var _currentScrambledWord: String
     val currentScrambledWord: String
         get() = _currentScrambledWord
 
     private var _count = 0
-    val count:Int
+    val count: Int
         get() = _count
 
-    private var wordsList:MutableList<String> = mutableListOf()
+    private var wordsList: MutableList<String> = mutableListOf()
     private lateinit var currentWord: String
 
     init {
@@ -29,12 +29,12 @@ class GameViewModel:ViewModel() {
         getNextWord()
     }
 
-    private fun getNextWord(){
+    private fun getNextWord() {
         currentWord = allWordsList.random()
         val tempWord = currentWord.toCharArray()
         tempWord.shuffle()
 
-        while (String(tempWord).equals(currentWord, false)){
+        while (String(tempWord).equals(currentWord, false)) {
             tempWord.shuffle()
         }
 
@@ -47,9 +47,20 @@ class GameViewModel:ViewModel() {
         }
     }
 
-    private fun nextWord():Boolean{
-        return if (currentWordCount < MAX_NO_OF_WORDS){
+    fun nextWord(): Boolean {
+        return if (currentWordCount < MAX_NO_OF_WORDS) {
             getNextWord()
+            true
+        } else false
+    }
+
+    private fun increaseScore(){
+        _score += SCORE_INCREASE
+    }
+
+    fun isUserWordCorrect(playerWord: String): Boolean {
+        return if (playerWord.equals(currentWord, true)) {
+            increaseScore()
             true
         } else false
     }

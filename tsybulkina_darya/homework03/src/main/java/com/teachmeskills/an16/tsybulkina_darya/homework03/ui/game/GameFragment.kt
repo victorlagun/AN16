@@ -66,6 +66,7 @@ class GameFragment : Fragment() {
         //  binding.submit.setOnClickListener { onSubmitWord() }
         //   binding.skip.setOnClickListener { onSkipWord() }
         // Update the UI
+        submit.setOnClickListener{onSubmitWord()}
         updateNextWordOnScreen()
         binding.score.text = getString(R.string.score, 0)
         binding.wordCount.text = getString(
@@ -108,6 +109,20 @@ class GameFragment : Fragment() {
         } else {
             binding.textField.isErrorEnabled = false
             binding.textInputEditText.text = null
+        }
+    }
+
+    private fun onSubmitWord(){
+        val playerWord = text_input_edit_text.text.toString()
+        if (viewModel.isUserWordCorrect(playerWord)) {
+            setErrorTextField(false)
+            if (viewModel.nextWord()) {
+                updateNextWordOnScreen()
+            } else {
+                showFinalScoreDialog()
+            }
+        }else {
+            setErrorTextField(true)
         }
     }
 
