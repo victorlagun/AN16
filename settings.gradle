@@ -49,4 +49,4 @@ modules.forEach { name, path ->
     include(name)
     project(name).projectDir = file(path)
 }
-include ':eliseyew_aleksandr-homework03'
+include ':eliseyev_aleksandr_homework03'
