@@ -63,7 +63,7 @@ class GameFragment : Fragment() {
 
         // Setup a click listener for the Submit and Skip buttons.
         binding.submit.setOnClickListener { onSubmitWord() }
-//        binding.skip.setOnClickListener { onSkipWord() }
+        binding.skip.setOnClickListener { onSkipWord() }
         // Update the UI
         updateNextWordOnScreen()
         binding.score.text = getString(R.string.score, 0)
@@ -92,6 +92,16 @@ class GameFragment : Fragment() {
             }
         }else {
             setErrorTextField(true)
+        }
+    }
+
+
+    private fun onSkipWord() {
+        if (viewModel.nextWord()) {
+            setErrorTextField(false)
+            updateNextWordOnScreen()
+        } else {
+            showFinalScoreDialog()
         }
     }
 
