@@ -74,6 +74,13 @@ class GameViewModel: ViewModel() {
         } else false
     }
 
+    fun reinitializeData(){
+        _score = 0
+        __currentWordCount = 0
+        wordsList.clear()
+        getNextWord()
+    }
+
     override fun onCleared() {
         super.onCleared()
         Log.d("GameFragment", "GameViewModel destroyed!")
