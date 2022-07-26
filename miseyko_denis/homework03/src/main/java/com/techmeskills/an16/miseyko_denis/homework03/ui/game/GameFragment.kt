@@ -23,6 +23,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.techmeskills.an16.miseyko_denis.homework03.R
 import com.techmeskills.an16.miseyko_denis.homework03.databinding.GameFragmentBinding
 import kotlinx.android.synthetic.main.game_fragment.*
@@ -61,8 +62,8 @@ class GameFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // Setup a click listener for the Submit and Skip buttons.
-        //  binding.submit.setOnClickListener { onSubmitWord() }
-        //   binding.skip.setOnClickListener { onSkipWord() }
+//        binding.submit.setOnClickListener { onSubmitWord() }
+//        binding.skip.setOnClickListener { onSkipWord() }
         // Update the UI
         updateNextWordOnScreen()
         binding.score.text = getString(R.string.score, 0)
@@ -116,12 +117,15 @@ class GameFragment : Fragment() {
         textView_unscrambled_word.text = viewModel.currentScrambledWord
     }
 
-//    private fun showFinalScoreDialog() {
-//        MaterialAlertDialogBuilder(requireContext())
-//            .setTitle("Title").setMessage("Message").setCancelable(false)
-//            .setNegativeButton(getString(R.string.exit)) { _, _ -> exitGame() }
-//            .setPositiveButton(getString(R.string.play_again)) { _, _ -> restartGame() }.show()
-//    }
+    private fun showFinalScoreDialog() {
+        MaterialAlertDialogBuilder(requireContext())
+            .setTitle(getString(R.string.congratulations))
+            .setMessage(getString(R.string.you_scored, viewModel.score))
+            .setCancelable(false)
+            .setNegativeButton(getString(R.string.exit)) { _, _ -> exitGame() }
+            .setPositiveButton(getString(R.string.play_again)) { _, _ -> restartGame() }
+            .show()
+    }
 
 
 }
