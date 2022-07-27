@@ -2,7 +2,6 @@ package com.example.eliseyev_aleksandr_homework03
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.android.unscramble.R
 
 /**
  * Creates an Activity that hosts the Game fragment in the app

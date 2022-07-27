@@ -1,11 +1,18 @@
 package com.example.eliseyev_aleksandr_homework03.ui.game
 
+import android.os.Bundle
+import android.util.Log
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.lifecycle.ViewModel
+import com.example.eliseyev_aleksandr_homework03.databinding.GameFragmentBinding
 
-/**
- * ViewModel containing the app data and methods to process the data
- */
 class GameViewModel : ViewModel() {
+    init {
+        Log.d("GameFragment", "GameViewModel created!")
+    }
+
     private var score = 0
     private var currentWordCount = 0
 
@@ -17,5 +24,10 @@ class GameViewModel : ViewModel() {
 
     val count: Int
         get() = _count
+
+    override fun onCleared() {
+        super.onCleared()
+        Log.d("GameFragment", "GameViewModel destroyed!")
+    }
 
 }
