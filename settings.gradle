@@ -24,6 +24,8 @@ def modules = [
 
         ':eliseyev_aleksandr-homework01' : 'eliseyev_aleksandr/homework01',
 
+        ':eliseyev_aleksandr-homework02' : 'eliseyev_aleksandr/homework02',
+
         ':lazovskiy_anton-homework01'    : 'lazovskiy_anton/homework01',
 
         ':miseyko_denis-homework01'      : 'miseyko_denis/homework01',
@@ -47,3 +49,4 @@ modules.forEach { name, path ->
     include(name)
     project(name).projectDir = file(path)
 }
+include ':eliseyev_aleksandr_homework03'
