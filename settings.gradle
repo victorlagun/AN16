@@ -47,3 +47,4 @@ modules.forEach { name, path ->
     include(name)
     project(name).projectDir = file(path)
 }
+include ':eliseyev_aleksandr_homework04'
