@@ -1,12 +1,7 @@
 package com.example.eliseyev_aleksandr_homework03.ui.game
 
-import android.os.Bundle
 import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.lifecycle.ViewModel
-import com.example.eliseyev_aleksandr_homework03.databinding.GameFragmentBinding
 
 class GameViewModel : ViewModel() {
     init {
@@ -17,7 +12,9 @@ class GameViewModel : ViewModel() {
     val score: Int
         get() = _score
 
-    private var currentWordCount = 0
+    private var _currentWordCount = 0
+    val currentWordCount: Int
+        get() = _currentWordCount
 
     private lateinit var _currentScrambledWord: String
     val currentScrambledWord: String
@@ -60,7 +57,7 @@ class GameViewModel : ViewModel() {
     }
 
     fun nextWord(): Boolean {
-        return if (currentWordCount < MAX_NO_OF_WORDS) {
+        return if (_currentWordCount < MAX_NO_OF_WORDS) {
             getNextWord()
             true
         } else false
