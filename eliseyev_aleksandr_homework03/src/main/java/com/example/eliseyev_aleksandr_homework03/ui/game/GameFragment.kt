@@ -5,13 +5,11 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.eliseyev_aleksandr_homework03.R
 import com.example.eliseyev_aleksandr_homework03.databinding.GameFragmentBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import androidx.lifecycle.ViewModel
 
 class GameFragment: Fragment() {
 
@@ -29,7 +27,20 @@ class GameFragment: Fragment() {
     ): View {
         binding = GameFragmentBinding.inflate(inflater, container, false)
         Log.d("GameFragment", "GameFragment created/re-created!")
+        Log.d("GameFragment", "Word: ${viewModel.currentScrambledWord} " +
+                "Score: ${viewModel.score} WordCount: ${viewModel.currentWordCount}")
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.submit.setOnClickListener { onSubmitWord() }
+        binding.skip.setOnClickListener { onSkipWord() }
+        updateNextWordOnScreen()
+        binding.score.text = getString(R.string.score, 0)
+        binding.wordCount.text = getString(
+            R.string.word_count, 0, MAX_NO_OF_WORDS)
     }
 
     private fun onSkipWord() {
@@ -39,6 +50,12 @@ class GameFragment: Fragment() {
         } else {
             showFinalScoreDialog()
         }
+    }
+
+    private fun getNextScrambledWord(): String {
+        val tempWord = allWordsList.random().toCharArray()
+        tempWord.shuffle()
+        return String(tempWord)
     }
 
     override fun onDetach() {
@@ -61,14 +78,14 @@ class GameFragment: Fragment() {
 
     }
 
-    private fun exitGame() {
-        TODO("Not yet implemented")
-    }
-
     private fun restartGame() {
         viewModel.reinitializeData()
         setErrorTextField(false)
         updateNextWordOnScreen()
+    }
+
+    private fun exitGame() {
+        activity?.finish()
     }
 
     private fun onSubmitWord() {
