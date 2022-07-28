@@ -1,7 +1,6 @@
 package com.example.eliseyev_aleksandr_homework03.ui.game
 
 import android.os.Bundle
-import android.provider.Settings.Global.getString
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -67,7 +66,9 @@ class GameFragment: Fragment() {
     }
 
     private fun restartGame() {
-        TODO("Not yet implemented")
+        viewModel.reinitializeData()
+        setErrorTextField(false)
+        updateNextWordOnScreen()
     }
 
     private fun onSubmitWord() {
@@ -94,4 +95,6 @@ class GameFragment: Fragment() {
             binding.textInputEditText.text = null
         }
     }
+
+
 }

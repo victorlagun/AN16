@@ -37,6 +37,13 @@ class GameViewModel : ViewModel() {
         getNextWord()
     }
 
+    fun reinitializeData() {
+        _score = 0
+        _currentWordCount = 0
+        wordsList.clear()
+        getNextWord()
+    }
+
     private var wordsList: MutableList<String> = mutableListOf()
     private lateinit var currentWord: String
 
