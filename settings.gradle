@@ -24,6 +24,8 @@ def modules = [
 
         ':eliseyev_aleksandr-homework01' : 'eliseyev_aleksandr/homework01',
 
+        ':eliseyev_aleksandr-homework04' : 'eliseyev_aleksandr/homework04',
+
         ':lazovskiy_anton-homework01'    : 'lazovskiy_anton/homework01',
 
         ':miseyko_denis-homework01'      : 'miseyko_denis/homework01',

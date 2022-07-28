@@ -22,7 +22,7 @@ apply plugin: 'kotlin-kapt'
 android {
     compileSdkVersion 30
     defaultConfig {
-        applicationId "com.example.android.trackmysleepquality"
+        applicationId "package com.example.eliseyev_aleksandr_homework04"
         minSdkVersion 19
         targetSdkVersion 30
         versionCode 1
