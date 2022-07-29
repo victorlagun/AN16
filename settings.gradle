@@ -40,6 +40,8 @@ def modules = [
 
         ':lagun_victor-homework01'       : 'lagun_victor/homework01',
 
+        ':lagun_victor-homework04'       : 'lagun_victor/homework04',
+
         ':template-homework'             : 'template/homework',
 ]
 
