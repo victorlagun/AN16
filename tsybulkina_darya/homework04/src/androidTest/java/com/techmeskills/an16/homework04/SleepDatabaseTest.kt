@@ -16,14 +16,19 @@
 
 package com.techmeskills.an16.homework04
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.liveData
+import androidx.room.Insert
+import androidx.room.Query
 import androidx.room.Room
+import androidx.room.Update
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import com.techmeskills.an16.homework04.database.SleepDatabaseDao
 import com.techmeskills.an16.homework04.database.SleepDatabase
 import com.techmeskills.an16.homework04.database.SleepNight
-import org.junit.Assert.assertEquals
 import org.junit.After
+import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -48,9 +53,9 @@ class SleepDatabaseTest {
         // Using an in-memory database because the information stored here disappears when the
         // process is killed.
         db = Room.inMemoryDatabaseBuilder(context, SleepDatabase::class.java)
-                // Allowing main thread queries, just for testing.
-                .allowMainThreadQueries()
-                .build()
+            // Allowing main thread queries, just for testing.
+            .allowMainThreadQueries()
+            .build()
         sleepDao = db.sleepDatabaseDao
     }
 
@@ -68,4 +73,48 @@ class SleepDatabaseTest {
         val tonight = sleepDao.getTonight()
         assertEquals(tonight?.sleepQuality, -1)
     }
+
+    @Test
+    @Throws(Exception::class)
+    fun deleteAll() {
+        val night = SleepNight()
+        sleepDao.insert(night)
+        sleepDao.clear()
+        assertNull(sleepDao.get(0))
+    }
+
+    @Test
+    @Throws(Exception::class)
+    fun getAllNight() {
+        val night = SleepNight()
+        sleepDao.insert(night)
+        assertNotNull(sleepDao.getAllNight() )
+    }
+
+    @Test
+    @Throws(Exception::class)
+    fun update() {
+        val night = SleepNight()
+        sleepDao.insert(night)
+        night.sleepQuality = 5
+        sleepDao.get(0)?.let { assertEquals(it.sleepQuality, 5) }
+    }
+
+    @Test
+    @Throws(Exception::class)
+    fun get() {
+        sleepDao.get(1)?.let { assertEquals(it.nightId, 1) }
+    }
+//    @Insert
+//    fun insert(night: SleepNight)
+//    @Update
+//    fun update(night: SleepNight)
+//    @Query("SELECT * from daily_sleep_quality_table WHERE nightId = :key")
+//    fun get(key:Long): SleepNight?
+//    @Query("DELETE FROM daily_sleep_quality_table")
+//    fun clear()
+//    @Query("SELECT * FROM daily_sleep_quality_table ORDER BY nightId DESC LIMIT 1")
+//    fun getTonight():SleepNight?
+//    @Query("SELECT * FROM daily_sleep_quality_table ORDER BY nightId DESC")
+//    fun getAllNight(): LiveData<List<SleepNight>>
 }
