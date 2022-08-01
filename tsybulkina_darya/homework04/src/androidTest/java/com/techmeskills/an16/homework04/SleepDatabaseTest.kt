@@ -16,12 +16,7 @@
 
 package com.techmeskills.an16.homework04
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.liveData
-import androidx.room.Insert
-import androidx.room.Query
 import androidx.room.Room
-import androidx.room.Update
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import com.techmeskills.an16.homework04.database.SleepDatabaseDao
@@ -88,7 +83,7 @@ class SleepDatabaseTest {
     fun getAllNight() {
         val night = SleepNight()
         sleepDao.insert(night)
-        assertNotNull(sleepDao.getAllNight() )
+        assertNotNull(sleepDao.getAllNights() )
     }
 
     @Test
