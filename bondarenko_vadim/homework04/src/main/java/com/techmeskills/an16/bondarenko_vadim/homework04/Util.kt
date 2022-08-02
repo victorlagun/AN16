@@ -18,6 +18,7 @@ package com.example.android.trackmysleepquality
 
 import android.annotation.SuppressLint
 import android.content.res.Resources
+import com.techmeskills.an16.bondarenko_vadim.homework04.R
 import java.text.SimpleDateFormat
 
 /**
