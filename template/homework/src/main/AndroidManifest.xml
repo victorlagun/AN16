@@ -6,6 +6,12 @@
     <application
         android:theme="@style/Theme.AN16"
         tools:ignore="MissingApplicationIcon">
+<<<<<<< HEAD
+=======
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+>>>>>>> origin/dev
     </application>
 
 </manifest>
