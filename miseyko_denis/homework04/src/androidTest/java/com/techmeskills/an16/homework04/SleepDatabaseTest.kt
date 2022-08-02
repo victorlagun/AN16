@@ -16,15 +16,18 @@
 
 package com.techmeskills.an16.homework04
 
+import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.room.Room
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import com.techmeskills.an16.homework04.database.SleepDatabase
 import com.techmeskills.an16.homework04.database.SleepDatabaseDao
 import com.techmeskills.an16.homework04.database.SleepNight
+import kotlinx.coroutines.runBlocking
 import org.junit.After
 import org.junit.Assert.assertEquals
 import org.junit.Before
+import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import java.io.IOException
@@ -48,9 +51,9 @@ class SleepDatabaseTest {
         // Using an in-memory database because the information stored here disappears when the
         // process is killed.
         db = Room.inMemoryDatabaseBuilder(context, SleepDatabase::class.java)
-                // Allowing main thread queries, just for testing.
-                .allowMainThreadQueries()
-                .build()
+            // Allowing main thread queries, just for testing.
+            .allowMainThreadQueries()
+            .build()
         sleepDao = db.sleepDatabaseDao
     }
 
@@ -63,30 +66,55 @@ class SleepDatabaseTest {
     @Test
     @Throws(Exception::class)
     fun insertAndGetNight() {
-        val night = SleepNight()
-        sleepDao.insert(night)
-        val tonight = sleepDao.getTonight()
-        assertEquals(tonight?.sleepQuality, -1)
+        runBlocking {
+            val night = SleepNight()
+            sleepDao.insert(night)
+            val tonight = sleepDao.getTonight()
+            assertEquals(tonight?.sleepQuality, -1)
+        }
     }
 
     @Test
     @Throws(Exception::class)
     fun updateNight() {
-        val night1 = SleepNight(nightId = 1)
-        sleepDao.insert(night1)
-        val night2 = SleepNight(nightId = 1, sleepQuality = 2)
-        sleepDao.update(night2)
-        val tonight = sleepDao.get(night2.nightId)
-        assertEquals(tonight?.sleepQuality, 2)
+        runBlocking {
+            val night1 = SleepNight(nightId = 1)
+            sleepDao.insert(night1)
+            val night2 = SleepNight(nightId = 1, sleepQuality = 2)
+            sleepDao.update(night2)
+            val tonight = sleepDao.get(night2.nightId)
+            assertEquals(tonight?.sleepQuality, 2)
+        }
     }
 
     @Test
     @Throws(Exception::class)
     fun clearNight() {
-        val night = SleepNight()
-        sleepDao.insert(night)
-        sleepDao.clear()
-        assertEquals(sleepDao.getTonight(), null)
+        runBlocking {
+            val night = SleepNight()
+            sleepDao.insert(night)
+            sleepDao.clear()
+            assertEquals(sleepDao.getTonight(), null)
+        }
+    }
+
+    @Rule @JvmField
+    val instantTaskExecutorRule = InstantTaskExecutorRule()
+
+    @Test
+    @Throws(Exception::class)
+    fun getAllNights() {
+        runBlocking {
+            val night1 = SleepNight(nightId = 1)
+            val night2 = SleepNight(nightId = 2)
+            sleepDao.insert(night1)
+            sleepDao.insert(night2)
+            val nights = sleepDao.getAllNights()
+            nights.observeForever {  }
+
+            assertEquals(nights.value, listOf(night2, night1))
+
+        }
     }
 
 }
