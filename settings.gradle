@@ -20,6 +20,12 @@ def modules = [
 
         ':bondarenko_vadim-homework01'   : 'bondarenko_vadim/homework01',
 
+        ':bondarenko_vadim-homework02'   : 'bondarenko_vadim/homework02',
+
+        ':bondarenko_vadim-homework03'   : 'bondarenko_vadim/homework03',
+        
+        ':bondarenko_vadim-homework04'   : 'bondarenko_vadim/homework04',
+
         ':edikhanov_egor-homework01'     : 'edikhanov_egor/homework01',
 
         ':eliseyev_aleksandr-homework01' : 'eliseyev_aleksandr/homework01',
@@ -45,3 +51,4 @@ modules.forEach { name, path ->
     include(name)
     project(name).projectDir = file(path)
 }
+
