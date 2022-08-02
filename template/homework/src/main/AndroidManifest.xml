@@ -6,6 +6,9 @@
     <application
         android:theme="@style/Theme.AN16"
         tools:ignore="MissingApplicationIcon">
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
