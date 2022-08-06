@@ -34,6 +34,8 @@ def modules = [
 
         ':tsybulkina_darya-homework01'   : 'tsybulkina_darya/homework01',
 
+        ':tsybulkina_darya-homework02'   : 'tsybulkina_darya/homework02',
+
         ':ventserev_aleksandr-homework01': 'ventserev_aleksandr/homework01',
 
         ':verevka_dmitry-homework01'     : 'verevka_dmitry/homework01',
