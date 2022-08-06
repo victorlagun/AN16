@@ -37,9 +37,9 @@ class OverviewViewModel : ViewModel() {
     val response: LiveData<String>
         get() = _response
 
-    private val _property = MutableLiveData<MarsProperty>()
+    private val _property = MutableLiveData<List<MarsProperty>>()
 
-    val property: LiveData<MarsProperty>
+    val property: LiveData<List<MarsProperty>>
         get() = _property
 
     init {
@@ -49,12 +49,10 @@ class OverviewViewModel : ViewModel() {
     private fun getMarsRealEstateProperties() {
         viewModelScope.launch {
             try {
-                val listResult = MarsApi.retrofitService.getProperties()
+                _property.value = MarsApi.retrofitService.getProperties()
                 _response.value =
-                    "Success: ${listResult.size} Mars properties retrieved"
-                if (listResult.size>0){
-                    _property.value = listResult[0]
-                }
+                    "Success: Mars properties retrieved"
+
             }catch (e:Exception){
                 _response.value = "Failure: ${e.message}"
             }
