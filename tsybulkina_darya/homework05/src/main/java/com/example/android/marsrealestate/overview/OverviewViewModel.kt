@@ -30,12 +30,13 @@ import kotlinx.coroutines.launch
  */
 class OverviewViewModel : ViewModel() {
 
-    // The internal MutableLiveData String that stores the most recent response
-    private val _response = MutableLiveData<String>()
+    enum class MarsApiStatus { LOADING, ERROR, DONE }
 
-    // The external immutable LiveData for the response String
-    val response: LiveData<String>
-        get() = _response
+    // The internal MutableLiveData String that stores the most recent response
+    private val _status = MutableLiveData<MarsApiStatus>()
+
+    val status: LiveData<MarsApiStatus>
+        get() = _status
 
     private val _property = MutableLiveData<List<MarsProperty>>()
 
@@ -48,13 +49,15 @@ class OverviewViewModel : ViewModel() {
 
     private fun getMarsRealEstateProperties() {
         viewModelScope.launch {
+            _status.value = MarsApiStatus.LOADING
             try {
                 _property.value = MarsApi.retrofitService.getProperties()
-                _response.value =
-                    "Success: Mars properties retrieved"
+                _status.value =
+                    MarsApiStatus.DONE
 
             }catch (e:Exception){
-                _response.value = "Failure: ${e.message}"
+                _status.value = MarsApiStatus.ERROR
+                _property.value = ArrayList()
             }
         }
     }
