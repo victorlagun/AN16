@@ -26,5 +26,6 @@ import com.example.eliseyev_aleksandr_homework04.database.SleepDatabaseDao
 class SleepTrackerViewModel(
         val database: SleepDatabaseDao,
         application: Application) : AndroidViewModel(application) {
+
 }
 
