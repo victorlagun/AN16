@@ -12,22 +12,23 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        button.setOnClickListener { clickRegistration() }
     }
 
-    fun clickRegistration(view: View) {
-        if (editTextAge.length() !=0 && editTextName.length() != 0 && editTextSurName.length() != 0) {
+    private fun clickRegistration() {
+        if (editTextAge.text.isNotEmpty() && editTextName.text.isNotEmpty() && editTextSurName.text.isNotEmpty()) {
             val surName = editTextName.text.toString()
             val name = editTextSurName.text.toString()
             val age = editTextAge.text.toString()
             val findPerson = persons.filter { Person(name, surName, age.toInt()) == it }
             if (findPerson.isNotEmpty()){
-                textViewRegistration.text = "Данный пользователь уже зарегистрирован"
+                textViewRegistration.text = resources.getString(R.string.error_registration);
             } else {
                 persons.add(Person(name, surName, age.toInt()))
-                textViewRegistration.text = "Пользователь ${persons.last().toString()} зарегистрирован"
+                textViewRegistration.text = getString(R.string.registration_message,persons.last().toString() )
             }
         } else {
-            Toast.makeText(this, "Заполните все поля!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, resources.getString(R.string.empty_field), Toast.LENGTH_SHORT).show()
         }
         editTextName.setText("")
         editTextSurName.setText("")
