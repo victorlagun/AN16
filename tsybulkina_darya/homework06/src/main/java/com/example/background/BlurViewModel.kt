@@ -20,6 +20,7 @@ import android.app.Application
 import android.content.ContentResolver
 import android.content.Context
 import android.net.Uri
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.work.*
@@ -33,9 +34,11 @@ class BlurViewModel(application: Application) : ViewModel() {
     internal var imageUri: Uri? = null
     internal var outputUri: Uri? = null
     private val worker = WorkManager.getInstance(application)
+    internal val outputWorkInfos: LiveData<List<WorkInfo>>
 
     init {
         imageUri = getImageUri(application.applicationContext)
+        outputWorkInfos = worker.getWorkInfosByTagLiveData(TAG_OUTPUT)
     }
 
     /**
@@ -57,7 +60,7 @@ class BlurViewModel(application: Application) : ViewModel() {
             }
             continuation = continuation.then(workRequest.build()    )
         }
-        val save = OneTimeWorkRequestBuilder<SaveImageToFileWorker>().build()
+        val save = OneTimeWorkRequestBuilder<SaveImageToFileWorker>().addTag(TAG_OUTPUT).build()
         continuation = continuation.then(save)
         continuation.enqueue()
     }
