@@ -1,4 +1,4 @@
-#Sat Aug 06 23:46:45 MSK 2022
+#Sun Aug 07 15:23:15 MSK 2022
 base.0=C\:\\Users\\Alexa\\AndroidStudioProjects\\AN16\\eliseyev_aleksandr_homework04\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex
