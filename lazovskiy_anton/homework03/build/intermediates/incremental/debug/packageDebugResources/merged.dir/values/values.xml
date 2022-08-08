@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <color name="black">#FF000000</color>
+    <color name="indigo_200">#FF9FA8DA</color>
+    <color name="indigo_500">#FF3F51B5</color>
+    <color name="indigo_800">#FF283593</color>
+    <color name="light_blue_200">#FF81D4FA</color>
+    <color name="light_blue_700">#FF0288D1</color>
+    <color name="red_400">#FFEF5350</color>
+    <color name="red_700">#FFD32F2F</color>
+    <color name="white">#FFFFFFFF</color>
+    <dimen name="default_margin">32dp</dimen>
+    <dimen name="default_padding">16dp</dimen>
+    <string name="app_name">Unscramble</string>
+    <string name="congratulations">Congratulations!</string>
+    <string name="enter_your_word">Enter your word</string>
+    <string name="exit">Exit</string>
+    <string name="instructions">Unscramble the word using all the letters.</string>
+    <string name="play_again">Play Again</string>
+    <string name="score">Score: %d</string>
+    <string name="skip">Skip</string>
+    <string name="submit">Submit</string>
+    <string name="try_again">Try again!</string>
+    <string name="word_count">%d of %d words</string>
+    <string name="you_scored">"You scored: %d"</string>
+    <style name="Theme.Unscramble" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        
+        <item name="colorPrimary">@color/indigo_500</item>
+        <item name="colorPrimaryVariant">@color/indigo_800</item>
+        <item name="colorOnPrimary">@color/white</item>
+        
+        <item name="colorSecondary">@color/light_blue_200</item>
+        <item name="colorSecondaryVariant">@color/light_blue_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        
+        <item name="android:statusBarColor" ns1:targetApi="l">?attr/colorPrimaryVariant</item>
+        
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="Widget.Unscramble.TextInputLayout.OutlinedBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeErrorColor">@color/red_700</item>
+        <item name="errorIconTint">@color/red_700</item>
+        <item name="errorTextColor">@color/red_700</item>
+        <item name="errorIconDrawable">@drawable/ic_error</item>
+        <item name="helperTextTextAppearance">@style/TextAppearance.MaterialComponents.Subtitle1</item>
+    </style>
+</resources>
