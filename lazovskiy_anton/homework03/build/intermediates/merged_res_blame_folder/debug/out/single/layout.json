@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "com.techmeskills.an16.lazovski_anton.homework03.lazovskiy_anton-homework03-mergeDebugResources-20:/layout/activity_main.xml",
+        "source": "com.techmeskills.an16.lazovski_anton.homework03.lazovskiy_anton-homework03-main-23:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.techmeskills.an16.lazovski_anton.homework03.lazovskiy_anton-homework03-mergeDebugResources-20:/layout/main_activity.xml",
+        "source": "com.techmeskills.an16.lazovski_anton.homework03.lazovskiy_anton-homework03-main-23:/layout/main_activity.xml"
+    },
+    {
+        "merged": "com.techmeskills.an16.lazovski_anton.homework03.lazovskiy_anton-homework03-mergeDebugResources-20:/layout/game_fragment.xml",
+        "source": "com.techmeskills.an16.lazovski_anton.homework03.lazovskiy_anton-homework03-main-23:/layout/game_fragment.xml"
+    }
+]
