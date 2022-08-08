@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.example.android.trackmysleepquality.app-mergeDebugResources-35:/layout/fragment_sleep_quality.xml",
+        "source": "com.example.android.trackmysleepquality.app-main-38:/layout/fragment_sleep_quality.xml"
+    },
+    {
+        "merged": "com.example.android.trackmysleepquality.app-mergeDebugResources-35:/layout/fragment_sleep_tracker.xml",
+        "source": "com.example.android.trackmysleepquality.app-main-38:/layout/fragment_sleep_tracker.xml"
+    }
+]
