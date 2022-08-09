@@ -6,4 +6,7 @@
     <string name="age">Возраст</string>
     <string name="secondName">Фамилия</string>
     <string name="name">Имя</string>
+    <string name="missingField">Все поля должны быть заполнены!</string>
+    <string name="exist">Уже было</string>
+    <string name="added">добавлен</string>
 </resources>

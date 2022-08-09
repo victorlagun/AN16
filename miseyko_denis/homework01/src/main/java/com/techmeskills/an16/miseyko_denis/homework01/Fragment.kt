@@ -1,12 +1,11 @@
 package com.techmeskills.an16.miseyko_denis.homework01
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import com.techmeskills.an16.miseyko_denis.homework01.R.*
+import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment.*
 import java.lang.Integer.parseInt
 
@@ -24,7 +23,7 @@ class Fragment : Fragment() {
 
         button.setOnClickListener {
             if (name.text.toString() == "" || secondName.text.toString() == "" || age.text.toString() == "") {
-                Toast.makeText(context, "Все поля должны быть заполнены!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, R.string.missingField, Toast.LENGTH_SHORT).show()
             } else {
                 val user = User(
                     name = name.text.toString(),
@@ -33,10 +32,10 @@ class Fragment : Fragment() {
                 )
 
                 if (users.contains(user)) {
-                    list.text = "Уже было"
+                    list.text = getString(R.string.exist)
                 } else {
                     users.add(user)
-                    list.text = "$user добавлен"
+                    list.text = "$user " + getString(R.string.added)
                 }
 
                 name.text.clear()
