@@ -24,7 +24,7 @@ import com.techmeskills.an16.staroselets_elena.homework04.database.SleepDatabase
 
 /**
  * This is pretty much boiler plate code for a ViewModel Factory.
- *
+
  * Provides the SleepDatabaseDao and context to the ViewModel.
  */
 class SleepTrackerViewModelFactory(

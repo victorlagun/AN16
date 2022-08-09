@@ -63,7 +63,6 @@ fun convertLongToDateString(systemTime: Long): String {
 
 /**
  * Takes a list of SleepNights and converts and formats it into one string for display.
- *
  * For display in a TextView, we have to supply one string, and styles are per TextView, not
  * applicable per word. So, we build a formatted string using HTML. This is handy, but we will
  * learn a better way of displaying this data in a future lesson.

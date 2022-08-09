@@ -27,9 +27,9 @@ import com.techmeskills.an16.staroselets_elena.homework04.formatNights
 import kotlinx.coroutines.launch
 
 
-/**
- * ViewModel for SleepTrackerFragment.
- */
+
+ //ViewModel for SleepTrackerFragment.
+
 class SleepTrackerViewModel(
     val database: SleepDatabaseDao,
     application: Application) : AndroidViewModel(application) {

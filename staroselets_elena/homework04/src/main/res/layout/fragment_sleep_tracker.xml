@@ -49,7 +49,8 @@
             app:layout_constraintTop_toBottomOf="@+id/stop_button">
 
             <!-- In the TextView, we can access the nightsString LiveData,
-                 which keeps it displayed and updated in the TextView
+
+                 <string name="five_excellent">Excellent!</string>
                  whenever it changes. -->
 
             <TextView

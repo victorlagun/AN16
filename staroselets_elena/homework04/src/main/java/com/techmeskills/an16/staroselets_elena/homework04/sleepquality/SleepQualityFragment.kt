@@ -35,7 +35,7 @@ class SleepQualityFragment : Fragment() {
 
     /**
      * Called when the Fragment is ready to display content to the screen.
-     *
+
      * This function uses DataBindingUtil to inflate R.layout.fragment_sleep_quality.
      */
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
