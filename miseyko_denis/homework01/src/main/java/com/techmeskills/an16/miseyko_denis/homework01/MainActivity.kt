@@ -1,7 +1,7 @@
 package com.techmeskills.an16.miseyko_denis.homework01
 
-import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
 
 
 class MainActivity : AppCompatActivity() {

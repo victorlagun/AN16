@@ -8,5 +8,5 @@
     <string name="name">Имя</string>
     <string name="missingField">Все поля должны быть заполнены!</string>
     <string name="exist">Уже было</string>
-    <string name="added">добавлен</string>
+    <string name="added">%s добавлен</string>
 </resources>

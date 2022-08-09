@@ -35,7 +35,7 @@ class Fragment : Fragment() {
                     list.text = getString(R.string.exist)
                 } else {
                     users.add(user)
-                    list.text = "$user " + getString(R.string.added)
+                    list.text = getString(R.string.added, user.toString())
                 }
 
                 name.text.clear()
