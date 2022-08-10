@@ -1,0 +1,8 @@
+com.example.eliseyev_aleksandr_homework04.test.eliseyev_aleksandr_homework04-core-1.1.0-0 C:\Users\Alexa\.gradle\caches\transforms-3\36ead710a9e408f304fe087972fbb157\transformed\core-1.1.0\res
+com.example.eliseyev_aleksandr_homework04.test.eliseyev_aleksandr_homework04-androidTest-1 C:\Users\Alexa\AndroidStudioProjects\AN16\eliseyev_aleksandr_homework04\build\generated\res\resValues\androidTest\debug
+com.example.eliseyev_aleksandr_homework04.test.eliseyev_aleksandr_homework04-androidTest-2 C:\Users\Alexa\AndroidStudioProjects\AN16\eliseyev_aleksandr_homework04\build\generated\res\rs\androidTest\debug
+com.example.eliseyev_aleksandr_homework04.test.eliseyev_aleksandr_homework04-mergeDebugAndroidTestResources-3 C:\Users\Alexa\AndroidStudioProjects\AN16\eliseyev_aleksandr_homework04\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.eliseyev_aleksandr_homework04.test.eliseyev_aleksandr_homework04-mergeDebugAndroidTestResources-4 C:\Users\Alexa\AndroidStudioProjects\AN16\eliseyev_aleksandr_homework04\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.eliseyev_aleksandr_homework04.test.eliseyev_aleksandr_homework04-merged_res-5 C:\Users\Alexa\AndroidStudioProjects\AN16\eliseyev_aleksandr_homework04\build\intermediates\merged_res\debugAndroidTest
+com.example.eliseyev_aleksandr_homework04.test.eliseyev_aleksandr_homework04-androidTest-6 C:\Users\Alexa\AndroidStudioProjects\AN16\eliseyev_aleksandr_homework04\src\androidTest\res
+com.example.eliseyev_aleksandr_homework04.test.eliseyev_aleksandr_homework04-androidTestDebug-7 C:\Users\Alexa\AndroidStudioProjects\AN16\eliseyev_aleksandr_homework04\src\androidTestDebug\res

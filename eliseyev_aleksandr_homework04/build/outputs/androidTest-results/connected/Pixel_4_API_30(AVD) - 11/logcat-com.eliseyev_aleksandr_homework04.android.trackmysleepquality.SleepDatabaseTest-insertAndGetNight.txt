@@ -1,0 +1,12 @@
+08-06 20:45:58.579  3163  3238 I TestRunner: started: insertAndGetNight(com.eliseyev_aleksandr_homework04.android.trackmysleepquality.SleepDatabaseTest)
+08-06 20:45:58.582  3163  3163 I MonitoringInstr: Activities that are still in CREATED to STOPPED: 0
+08-06 20:45:58.581  2441  2814 I CarrierServices: [237] chn.h: BindingManager: binding and reset P/H Flag stay same
+08-06 20:45:58.582  2441  2814 I CarrierServices: [237] dsd.a: RcsAvailabilityManager: Rcs Availability still CARRIER_SETUP_PENDING (Carrier RCS is not set up)
+08-06 20:45:58.604  1183  2541 W Conscrypt: Could not set socket write timeout: java.net.SocketException: Socket closed
+08-06 20:45:58.612  2140  2532 E abkp    : Non-success http response code 416 for: https://www.gstatic.com/webref-ondevice/am/20220731/09f066ebf27d7847d6a26b9ea93d784a09e85dfa.zip
+08-06 20:45:58.616  1183  2541 W Conscrypt: 	at com.google.android.gms.org.conscrypt.Platform.setSocketWriteTimeout(:com.google.android.gms@222615040@22.26.15 (150700-461192076):2)
+08-06 20:45:58.616  1183  2541 W Conscrypt: 	at com.google.android.gms.org.conscrypt.ConscryptFileDescriptorSocket.setSoWriteTimeout(:com.google.android.gms@222615040@22.26.15 (150700-461192076):0)
+08-06 20:45:58.650  2140  2222 I BugleRcsEngine: [189] aeec.connect: Connecting SignupService
+08-06 20:45:58.657  2140  2222 I BugleRcsEngine: [189] aeec.connect: shouldUseCarrierServicesJibeService: true, CarrierServices rcs service found: true
+08-06 20:45:58.657  2140  2222 I BugleRcsEngine: [189] aeec.connect: Binding to JibeService in CarrierServices.
+08-06 20:45:58.661  3163  3238 I TestRunner: finished: insertAndGetNight(com.eliseyev_aleksandr_homework04.android.trackmysleepquality.SleepDatabaseTest)
