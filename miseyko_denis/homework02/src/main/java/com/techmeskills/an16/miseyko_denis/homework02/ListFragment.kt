@@ -7,6 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.setFragmentResultListener
 import androidx.recyclerview.widget.RecyclerView
+import com.techmeskills.an16.miseyko_denis.homework02.UserFragment.Companion.KEY_AGE
+import com.techmeskills.an16.miseyko_denis.homework02.UserFragment.Companion.KEY_NAME
+import com.techmeskills.an16.miseyko_denis.homework02.UserFragment.Companion.KEY_SECONDNAME
 import kotlinx.android.synthetic.main.fragment_list.*
 
 class ListFragment : Fragment() {
@@ -30,9 +33,9 @@ class ListFragment : Fragment() {
         floatingActionButton.setOnClickListener { onClicked() }
         setFragmentResultListener(RESULT) { _, bundle ->
             val user = User(
-                bundle.getString("name").toString(),
-                bundle.getString("secondName").toString(),
-                bundle.getInt("age")
+                bundle.getString(KEY_NAME).toString(),
+                bundle.getString(KEY_SECONDNAME).toString(),
+                bundle.getInt(KEY_AGE)
             )
             data.add(user)
         }

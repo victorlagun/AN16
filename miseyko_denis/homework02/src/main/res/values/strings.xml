@@ -8,4 +8,6 @@
     <string name="name">Имя</string>
     <string name="textview">TextView</string>
     <string name="empty">Список пуст</string>
+    <string name="missingField">Все поля должны быть заполнены!</string>
+    <string name="exist">Уже было</string>
 </resources>
