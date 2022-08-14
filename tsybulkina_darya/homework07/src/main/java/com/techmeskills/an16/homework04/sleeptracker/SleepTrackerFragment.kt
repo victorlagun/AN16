@@ -23,7 +23,9 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.techmeskills.an16.homework04.adapter.SleepNightAdapter
 import com.techmeskills.an16.homework04.database.SleepDatabase
@@ -62,9 +64,18 @@ class SleepTrackerFragment : Fragment() {
         binding.setLifecycleOwner(this)
         val adapter = SleepNightAdapter(SleepNightListener { nightId ->
             Toast.makeText(context, "${nightId}", Toast.LENGTH_LONG).show()
+            sleepTrackerViewModel.onSleepNightClicked(nightId)
         })
         binding.sleepList.adapter = adapter
         sleepTrackerViewModel.nights.observe(viewLifecycleOwner){adapter.submitList(it)}
+        sleepTrackerViewModel.navigateToSleepDetail.observe(viewLifecycleOwner, Observer { night ->
+            night?.let {
+                this.findNavController().navigate(
+                    SleepTrackerFragmentDirections
+                        .actionSleepTrackerFragmentToSleepDetailFragment(night))
+                sleepTrackerViewModel.onSleepDetailNavigated()
+            }
+        })
         val manager = GridLayoutManager(activity, 3, GridLayoutManager.VERTICAL, false)
         binding.sleepList.layoutManager = manager
         return binding.root

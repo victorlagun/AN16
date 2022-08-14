@@ -9,21 +9,25 @@ import com.techmeskills.an16.homework04.database.SleepNight
 import com.techmeskills.an16.lagun_victor.homework04.R
 
 @BindingAdapter("sleepDurationFormatted")
-fun TextView.setSleepDurationFormatted(item: SleepNight) {
-    text = convertDurationToFormatted(item.startTimeMilli, item.endTimeMilli, context.resources)
+fun TextView.setSleepDurationFormatted(item: SleepNight?) {
+    item?.let {
+        text = convertDurationToFormatted(item.startTimeMilli, item.endTimeMilli, context.resources)
+    }
 }
 
 
 @BindingAdapter("sleepQualityString")
-fun TextView.setSleepQualityString(item: SleepNight) {
-    text = convertNumericQualityToString(item.sleepQuality, context.resources)
+fun TextView.setSleepQualityString(item: SleepNight?) {
+    item?.let {
+        text = convertNumericQualityToString(item.sleepQuality, context.resources)
+    }
 }
 
 
 @BindingAdapter("sleepImage")
-fun ImageView.setSleepImage(item: SleepNight) {
+fun ImageView.setSleepImage(item: SleepNight?) {
     setImageResource(
-        when (item.sleepQuality) {
+        when (item?.sleepQuality) {
             0 -> R.drawable.ic_sleep_0
             1 -> R.drawable.ic_sleep_1
             2 -> R.drawable.ic_sleep_2
