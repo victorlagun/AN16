@@ -6,12 +6,14 @@ import androidx.recyclerview.widget.RecyclerView
 import com.techmeskills.an16.homework04.convertDurationToFormatted
 import com.techmeskills.an16.homework04.convertNumericQualityToString
 import com.techmeskills.an16.homework04.database.SleepNight
+import com.techmeskills.an16.homework04.sleeptracker.SleepNightListener
 import com.techmeskills.an16.lagun_victor.homework04.R
 import com.techmeskills.an16.lagun_victor.homework04.databinding.ListItemSleepNightBinding
 
 class ListItemSleepViewHolder private constructor(val binding: ListItemSleepNightBinding):RecyclerView.ViewHolder(binding.root) {
 
-    fun bind(item: SleepNight) {
+    fun bind(item: SleepNight, clickListener: SleepNightListener) {
+        binding.clickListener = clickListener
         binding.sleep = item
         binding.executePendingBindings()
     }
