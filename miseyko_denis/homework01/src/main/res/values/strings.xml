@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">AN16</string>
+    <string name="app_name">An16tms</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add">Добавить</string>
+    <string name="age">Возраст</string>
+    <string name="secondName">Фамилия</string>
+    <string name="name">Имя</string>
+    <string name="missingField">Все поля должны быть заполнены!</string>
+    <string name="exist">Уже было</string>
+    <string name="added">%s добавлен</string>
 </resources>
