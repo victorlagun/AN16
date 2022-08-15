@@ -39,7 +39,9 @@ def modules = [
         ':verevka_dmitry-homework01'     : 'verevka_dmitry/homework01',
 
         ':lagun_victor-homework01'       : 'lagun_victor/homework01',
-
+        
+        ':lagun_victor-homework04'       : 'lagun_victor/homework04',
+        
         ':template-homework'             : 'template/homework',
 ]
 
