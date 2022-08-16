@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.example.android.trackmysleepquality.sleeptracker
+package com.techmeskills.an16.bondarenko_vadim.homework05.sleeptracker
 
 import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.techmeskills.an16.bondarenko_vadim.homework04.database.SleepDatabaseDao
+import com.techmeskills.an16.bondarenko_vadim.homework05.database.SleepDatabaseDao
 
 
 /**

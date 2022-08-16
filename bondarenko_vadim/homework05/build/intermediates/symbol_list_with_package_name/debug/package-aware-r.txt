@@ -1,4 +1,4 @@
-com.techmeskills.an16.bondarenko_vadim.homework04
+com.techmeskills.an16.bondarenko_vadim.homework05
 anim abc_fade_in
 anim abc_fade_out
 anim abc_grow_fade_in_from_bottom
@@ -2849,6 +2849,7 @@ id showHome
 id showTitle
 id sin
 id skipCollapsed
+id sleep_list
 id sleep_quality_fragment
 id sleep_tracker_fragment
 id slide
@@ -2916,7 +2917,6 @@ id textinput_helper_text
 id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
-id textview
 id time
 id title
 id titleDividerNoCustom
@@ -3132,6 +3132,7 @@ layout test_toolbar
 layout test_toolbar_custom_background
 layout test_toolbar_elevation
 layout test_toolbar_surface
+layout text_item_view
 layout text_view_with_line_height_from_appearance
 layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style

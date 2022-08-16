@@ -14,4 +14,4 @@
  * limitations under the License.
  */
 
-package com.example.android.trackmysleepquality.sleepquality
+package com.techmeskills.an16.bondarenko_vadim.homework05.sleepquality

@@ -25,6 +25,7 @@ def modules = [
         ':bondarenko_vadim-homework03'   : 'bondarenko_vadim/homework03',
 
         ':bondarenko_vadim-homework04'   : 'bondarenko_vadim/homework04',
+
         ':bondarenko_vadim-homework05'   : 'bondarenko_vadim/homework05',
         
         ':edikhanov_egor-homework01'     : 'edikhanov_egor/homework01',

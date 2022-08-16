@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.techmeskills.an16.bondarenko_vadim.homework04.database
+package com.techmeskills.an16.bondarenko_vadim.homework05.database
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

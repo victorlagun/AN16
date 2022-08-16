@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.trackmysleepquality.sleeptracker
+package com.techmeskills.an16.bondarenko_vadim.homework04.sleeptracker
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel

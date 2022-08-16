@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.techmeskills.an16.bondarenko_vadim.homework04.sleeptracker
+package com.techmeskills.an16.bondarenko_vadim.homework05.sleeptracker
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -22,8 +22,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import com.techmeskills.an16.bondarenko_vadim.homework04.R
-import com.techmeskills.an16.bondarenko_vadim.homework04.databinding.FragmentSleepTrackerBinding
+import com.techmeskills.an16.bondarenko_vadim.homework05.R
+import com.techmeskills.an16.bondarenko_vadim.homework05.databinding.FragmentSleepTrackerBinding
+import com.techmeskills.an16.bondarenko_vadim.homework05.sleeptracker.SleepNightAdapter
 
 /**
  * A fragment with buttons to record start and end times for sleep, which are saved in
@@ -44,6 +45,8 @@ class SleepTrackerFragment : Fragment() {
         val binding: FragmentSleepTrackerBinding = DataBindingUtil.inflate(
                 inflater, R.layout.fragment_sleep_tracker, container, false)
 
+        val adapter = SleepNightAdapter()
+        binding.sleepList.adapter = adapter
         return binding.root
     }
 }

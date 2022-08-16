@@ -14,11 +14,13 @@
  * limitations under the License.
  */
 
-package com.example.android.trackmysleepquality
+package com.techmeskills.an16.bondarenko_vadim.homework05
 
 import android.annotation.SuppressLint
 import android.content.res.Resources
-import com.techmeskills.an16.bondarenko_vadim.homework04.R
+import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
+import com.techmeskills.an16.bondarenko_vadim.homework05.R
 import java.text.SimpleDateFormat
 
 /**
@@ -41,6 +43,7 @@ fun convertNumericQualityToString(quality: Int, resources: Resources): String {
     return qualityString
 }
 
+class TextItemViewHolder(val textView: TextView): RecyclerView.ViewHolder(textView)
 
 /**
  * Take the Long milliseconds returned by the system and stored in Room,

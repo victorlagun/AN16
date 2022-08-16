@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.techmeskills.an16.bondarenko_vadim.homework04
+package com.techmeskills.an16.bondarenko_vadim.homework05
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

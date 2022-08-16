@@ -1,57 +1,57 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="com.techmeskills.an16.bondarenko_vadim.homework04"
+3    package="com.techmeskills.an16.bondarenko_vadim.homework05"
 4    android:versionCode="1"
 5    android:versionName="1.0" >
 6
 7    <uses-sdk
 8        android:minSdkVersion="22"
-8-->/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml
+8-->/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml
 9        android:targetSdkVersion="32" />
-9-->/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml
+9-->/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml
 10
 11    <application
-11-->/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:5:5-23:19
+11-->/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:5:5-25:19
 12        android:allowBackup="true"
-12-->/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:6:9-35
+12-->/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:7:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 13-->[androidx.core:core:1.8.0] /Users/blk/.gradle/caches/transforms-3/5c21b1ef403a8aa183859899acb645fe/transformed/core-1.8.0/AndroidManifest.xml:24:18-86
 14        android:debuggable="true"
 15        android:icon="@mipmap/ic_launcher_sleep_tracker"
-15-->/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:7:9-57
+15-->/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:8:9-57
 16        android:label="@string/app_name"
-16-->/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:8:9-41
+16-->/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:9:9-41
 17        android:roundIcon="@mipmap/ic_launcher_sleep_tracker_round"
-17-->/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:9:9-68
+17-->/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:10:9-68
 18        android:supportsRtl="true"
-18-->/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:10:9-35
+18-->/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:11:9-35
 19        android:testOnly="true"
 20        android:theme="@style/AppTheme" >
-20-->/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:11:9-40
+20-->/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:12:9-40
 21        <activity
-21-->/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:12:9-19:20
-22            android:name="com.techmeskills.an16.bondarenko_vadim.homework04.MainActivity"
-22-->/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:12:19-96
+21-->/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:14:9-21:20
+22            android:name="com.techmeskills.an16.bondarenko_vadim.homework05.MainActivity"
+22-->/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:14:19-96
 23            android:exported="true" >
-23-->/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:13:13-36
+23-->/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:15:13-36
 24            <intent-filter>
-24-->/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:14:13-18:29
+24-->/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:16:13-20:29
 25                <action android:name="android.intent.action.MAIN" />
-25-->/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:15:17-69
-25-->/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:15:25-66
+25-->/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:17:17-69
+25-->/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:17:25-66
 26
 27                <category android:name="android.intent.category.LAUNCHER" />
-27-->/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:17:17-77
-27-->/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:17:27-74
+27-->/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:19:17-77
+27-->/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:19:27-74
 28            </intent-filter>
 29        </activity>
 30
 31        <meta-data
-31-->/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:20:9-22:57
+31-->/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:22:9-24:57
 32            android:name="preloaded_fonts"
-32-->/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:21:13-43
+32-->/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:23:13-43
 33            android:resource="@array/preloaded_fonts" />
-33-->/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:22:13-54
+33-->/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:24:13-54
 34
 35        <uses-library
 35-->[androidx.window:window:1.0.0] /Users/blk/.gradle/caches/transforms-3/8eeebf80c8b6418664dd135e41a4fb65/transformed/window-1.0.0/AndroidManifest.xml:25:9-27:40
@@ -79,7 +79,7 @@
 47-->[androidx.emoji2:emoji2:1.0.0] /Users/blk/.gradle/caches/transforms-3/fb9462ac0b66ac07527d19c4518f47ac/transformed/emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
 48            android:name="androidx.startup.InitializationProvider"
 48-->[androidx.emoji2:emoji2:1.0.0] /Users/blk/.gradle/caches/transforms-3/fb9462ac0b66ac07527d19c4518f47ac/transformed/emoji2-1.0.0/AndroidManifest.xml:27:13-67
-49            android:authorities="com.techmeskills.an16.bondarenko_vadim.homework04.androidx-startup"
+49            android:authorities="com.techmeskills.an16.bondarenko_vadim.homework05.androidx-startup"
 49-->[androidx.emoji2:emoji2:1.0.0] /Users/blk/.gradle/caches/transforms-3/fb9462ac0b66ac07527d19c4518f47ac/transformed/emoji2-1.0.0/AndroidManifest.xml:28:13-68
 50            android:exported="false" >
 50-->[androidx.emoji2:emoji2:1.0.0] /Users/blk/.gradle/caches/transforms-3/fb9462ac0b66ac07527d19c4518f47ac/transformed/emoji2-1.0.0/AndroidManifest.xml:29:13-37

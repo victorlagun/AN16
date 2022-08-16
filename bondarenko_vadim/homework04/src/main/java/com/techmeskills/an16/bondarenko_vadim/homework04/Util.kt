@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.trackmysleepquality
+package com.techmeskills.an16.bondarenko_vadim.homework04
 
 import android.annotation.SuppressLint
 import android.content.res.Resources

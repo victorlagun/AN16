@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:2:1-25:12
-INJECTED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:2:1-25:12
-INJECTED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:2:1-25:12
-INJECTED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:2:1-25:12
+ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:2:1-27:12
 MERGED from [androidx.databinding:databinding-adapters:7.2.1] /Users/blk/.gradle/caches/transforms-3/864ed96c0fde01c7ba62788f8c5442f6/transformed/databinding-adapters-7.2.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.databinding:databinding-ktx:7.2.1] /Users/blk/.gradle/caches/transforms-3/f2f530f0f0e1bc0a4ff27e9fe10a5717/transformed/databinding-ktx-7.2.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.databinding:databinding-runtime:7.2.1] /Users/blk/.gradle/caches/transforms-3/16576521e65789c450e8ae0f9a08c8e3/transformed/databinding-runtime-7.2.1/AndroidManifest.xml:17:1-24:12
@@ -70,25 +70,25 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/blk/.gradle/caches
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/blk/.gradle/caches/transforms-3/ad34296c93b56f11caa15769464086d1/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] /Users/blk/.gradle/caches/transforms-3/c370f9bf3ab1d011b4a5050b07da58f3/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/blk/.gradle/caches/transforms-3/037779fa3f2d09998b64d7ba9ab6806b/transformed/annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
-INJECTED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:2:1-25:12
-INJECTED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:2:1-25:12
-INJECTED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:2:1-25:12
+INJECTED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:2:1-27:12
 	package
-		ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:3:5-64
-		INJECTED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml
-		INJECTED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml
+		ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:3:5-64
+		INJECTED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml
+		INJECTED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml
-		ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:2:1-25:12
-		INJECTED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml
+		INJECTED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml
+		ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:2:1-27:12
+		INJECTED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml
-		ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:2:1-25:12
-		INJECTED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml
+		INJECTED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml
+		ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:2:1-27:12
+		INJECTED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:2:11-69
 application
-ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:5:5-23:19
+ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:5:5-25:19
 MERGED from [com.google.android.material:material:1.6.1] /Users/blk/.gradle/caches/transforms-3/1a2c4686e61aae0475e7503f42b7bf7b/transformed/material-1.6.1/AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.6.1] /Users/blk/.gradle/caches/transforms-3/1a2c4686e61aae0475e7503f42b7bf7b/transformed/material-1.6.1/AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /Users/blk/.gradle/caches/transforms-3/120a172a0232f5cbbdb626c0c6799518/transformed/constraintlayout-2.0.1/AndroidManifest.xml:9:5-20
@@ -110,43 +110,43 @@ MERGED from [androidx.startup:startup-runtime:1.0.0] /Users/blk/.gradle/caches/t
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.8.0] /Users/blk/.gradle/caches/transforms-3/5c21b1ef403a8aa183859899acb645fe/transformed/core-1.8.0/AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:10:9-35
+		ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:11:9-35
 	android:label
-		ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:8:9-41
+		ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:9:9-41
 	android:roundIcon
-		ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:9:9-68
+		ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:10:9-68
 	android:icon
-		ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:7:9-57
+		ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:8:9-57
 	android:allowBackup
-		ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:6:9-35
+		ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:7:9-35
 	android:theme
-		ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:11:9-40
-activity#com.techmeskills.an16.bondarenko_vadim.homework04.MainActivity
-ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:12:9-19:20
+		ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:12:9-40
+activity#com.techmeskills.an16.bondarenko_vadim.homework05.MainActivity
+ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:14:9-21:20
 	android:exported
-		ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:13:13-36
+		ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:15:13-36
 	android:name
-		ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:12:19-96
+		ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:14:19-96
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:14:13-18:29
+ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:16:13-20:29
 action#android.intent.action.MAIN
-ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:15:17-69
+ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:17:17-69
 	android:name
-		ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:15:25-66
+		ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:17:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:17:17-77
+ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:19:17-77
 	android:name
-		ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:17:27-74
+		ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:19:27-74
 meta-data#preloaded_fonts
-ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:20:9-22:57
+ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:22:9-24:57
 	android:resource
-		ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:22:13-54
+		ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:24:13-54
 	android:name
-		ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml:21:13-43
+		ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml:23:13-43
 uses-sdk
-INJECTED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml
-INJECTED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml
+INJECTED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml
+INJECTED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml
 MERGED from [androidx.databinding:databinding-adapters:7.2.1] /Users/blk/.gradle/caches/transforms-3/864ed96c0fde01c7ba62788f8c5442f6/transformed/databinding-adapters-7.2.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.databinding:databinding-adapters:7.2.1] /Users/blk/.gradle/caches/transforms-3/864ed96c0fde01c7ba62788f8c5442f6/transformed/databinding-adapters-7.2.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.databinding:databinding-ktx:7.2.1] /Users/blk/.gradle/caches/transforms-3/f2f530f0f0e1bc0a4ff27e9fe10a5717/transformed/databinding-ktx-7.2.1/AndroidManifest.xml:20:5-22:41
@@ -279,16 +279,16 @@ MERGED from [androidx.print:print:1.0.0] /Users/blk/.gradle/caches/transforms-3/
 MERGED from [androidx.print:print:1.0.0] /Users/blk/.gradle/caches/transforms-3/c370f9bf3ab1d011b4a5050b07da58f3/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/blk/.gradle/caches/transforms-3/037779fa3f2d09998b64d7ba9ab6806b/transformed/annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/blk/.gradle/caches/transforms-3/037779fa3f2d09998b64d7ba9ab6806b/transformed/annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
-INJECTED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml
-INJECTED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml
+INJECTED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml
+INJECTED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml
-		ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml
-		INJECTED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml
+		INJECTED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml
+		ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml
+		INJECTED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml
-		ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml
-		INJECTED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/src/main/AndroidManifest.xml
+		INJECTED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml
+		ADDED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml
+		INJECTED from /Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework05/src/main/AndroidManifest.xml
 uses-library#androidx.window.extensions
 ADDED from [androidx.window:window:1.0.0] /Users/blk/.gradle/caches/transforms-3/8eeebf80c8b6418664dd135e41a4fb65/transformed/window-1.0.0/AndroidManifest.xml:25:9-27:40
 	android:required

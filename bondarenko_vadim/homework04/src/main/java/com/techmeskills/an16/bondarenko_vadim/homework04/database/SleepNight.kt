@@ -35,5 +35,3 @@ data class SleepNight(
     var sleepQuality: Int = -1
 )
 
-
-
