@@ -1,0 +1,68 @@
+# 2022-08-02T18:11:37.441Z:
+test_suite_meta_data {
+  scheduled_test_case_count: 1
+}
+test_status: PASSED
+test_result {
+  test_case {
+    test_class: "SleepDatabaseTest"
+    test_package: "com.techmeskills.an16.bondarenko_vadim.homework04"
+    test_method: "insertAndGetNight"
+    start_time {
+      seconds: 1659463896
+      nanos: 426000000
+    }
+    end_time {
+      seconds: 1659463896
+      nanos: 520000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/build/outputs/androidTest-results/connected/Pixel_4_API_30(AVD) - 11/logcat-com.techmeskills.an16.bondarenko_vadim.homework04.SleepDatabaseTest-insertAndGetNight.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/build/outputs/androidTest-results/connected/Pixel_4_API_30(AVD) - 11/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/build/outputs/androidTest-results/connected/Pixel_4_API_30(AVD) - 11/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/build/outputs/androidTest-results/connected/Pixel_4_API_30(AVD) - 11/cpuinfo"
+    }
+  }
+}
+output_artifact {
+  label {
+    label: "test-results.log"
+    namespace: "com.google.testing.platform.runtime.android.driver.AndroidInstrumentationDriver"
+  }
+  source_path {
+    path: "/Users/blk/AndroidStudioProjects/AN16/bondarenko_vadim/homework04/build/outputs/androidTest-results/connected/Pixel_4_API_30(AVD) - 11/testlog/test-results.log"
+  }
+  type: TEST_DATA
+  mime_type: "text/plain"
+}

@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.techmeskills.an16.bondarenko_vadim.homework04.bondarenko_vadim-homework04-mergeDebugResources-52:/layout/fragment_sleep_tracker.xml",
+        "source": "com.techmeskills.an16.bondarenko_vadim.homework04.bondarenko_vadim-homework04-main-55:/layout/fragment_sleep_tracker.xml"
+    },
+    {
+        "merged": "com.techmeskills.an16.bondarenko_vadim.homework04.bondarenko_vadim-homework04-mergeDebugResources-52:/layout/fragment_sleep_quality.xml",
+        "source": "com.techmeskills.an16.bondarenko_vadim.homework04.bondarenko_vadim-homework04-main-55:/layout/fragment_sleep_quality.xml"
+    }
+]

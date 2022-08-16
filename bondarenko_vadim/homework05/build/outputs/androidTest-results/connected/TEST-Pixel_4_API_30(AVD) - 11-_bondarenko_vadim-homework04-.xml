@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="com.techmeskills.an16.bondarenko_vadim.homework04.SleepDatabaseTest" tests="1" failures="0" errors="0" skipped="0" time="0.684" timestamp="2022-08-02T18:11:37" hostname="localhost">
+  <properties>
+    <property name="device" value="Pixel_4_API_30(AVD) - 11" />
+    <property name="flavor" value="" />
+    <property name="project" value=":bondarenko_vadim-homework04" />
+  </properties>
+  <testcase name="insertAndGetNight" classname="com.techmeskills.an16.bondarenko_vadim.homework04.SleepDatabaseTest" time="0.032" />
+</testsuite>

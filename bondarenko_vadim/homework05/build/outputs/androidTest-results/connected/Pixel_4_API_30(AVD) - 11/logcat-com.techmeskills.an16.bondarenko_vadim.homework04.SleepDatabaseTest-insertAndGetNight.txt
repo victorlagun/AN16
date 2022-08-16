@@ -1,0 +1,2 @@
+08-02 21:11:36.123  8397  8418 I TestRunner: started: insertAndGetNight(com.techmeskills.an16.bondarenko_vadim.homework04.SleepDatabaseTest)
+08-02 21:11:36.147  8397  8418 I TestRunner: finished: insertAndGetNight(com.techmeskills.an16.bondarenko_vadim.homework04.SleepDatabaseTest)
