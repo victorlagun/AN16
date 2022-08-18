@@ -34,7 +34,6 @@ id quality_one_image
 id quality_three_image
 id quality_two_image
 id quality_zero_image
-id sleep_list
 id sleep_quality_fragment
 id sleep_tracker_fragment
 id start_button

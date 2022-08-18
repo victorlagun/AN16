@@ -2849,7 +2849,6 @@ id showHome
 id showTitle
 id sin
 id skipCollapsed
-id sleep_list
 id sleep_quality_fragment
 id sleep_tracker_fragment
 id slide

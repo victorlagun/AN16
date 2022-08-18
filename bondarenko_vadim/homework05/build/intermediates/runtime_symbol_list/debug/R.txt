@@ -2848,7 +2848,6 @@ int id showHome 0x7f0a0167
 int id showTitle 0x7f0a0168
 int id sin 0x7f0a0169
 int id skipCollapsed 0x7f0a016a
-int id sleep_list 0x7f0a016b
 int id sleep_quality_fragment 0x7f0a016c
 int id sleep_tracker_fragment 0x7f0a016d
 int id slide 0x7f0a016e

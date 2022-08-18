@@ -23,7 +23,9 @@
          the whole ViewModel, so that we can access the LiveData,
          click handlers, and state variables. -->
     
-
+         
+                                
+                                                                                                 
            
 
     <!-- Start of the visible fragment layout using ConstraintLayout -->
@@ -48,6 +50,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin"
+            android:tag="binding_1"                                           
             android:text="@string/start"
             app:layout_constraintBaseline_toBaselineOf="@id/stop_button"
             app:layout_constraintEnd_toStartOf="@+id/stop_button"
@@ -56,6 +59,7 @@
 
         <Button
             android:id="@+id/stop_button"
+            android:tag="binding_2"                                         
             style="@style/SleepButtons"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -68,6 +72,7 @@
 
         <Button
             android:id="@+id/clear_button"
+            android:tag="binding_3"                                   
             style="@style/SleepButtons"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -79,18 +84,19 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <androidx.recyclerview.widget.RecyclerView
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginBottom="@dimen/triple_margin"
+            android:fontFamily="@font/roboto"
+            android:tag="binding_4"                            
+            android:textSize="@dimen/title_text_size"
 
-            android:id="@+id/sleep_list"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toTopOf="@+id/clear_button"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/stop_button"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-
-            />
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
          
