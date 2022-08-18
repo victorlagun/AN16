@@ -1,7 +1,9 @@
 package com.techmeskills.an16.bondarenko_vadim.homework05.database;
 
 import android.database.Cursor;
+import android.os.CancellationSignal;
 import androidx.lifecycle.LiveData;
+import androidx.room.CoroutinesRoom;
 import androidx.room.EntityDeletionOrUpdateAdapter;
 import androidx.room.EntityInsertionAdapter;
 import androidx.room.RoomDatabase;
@@ -12,6 +14,7 @@ import androidx.room.util.DBUtil;
 import androidx.sqlite.db.SupportSQLiteStatement;
 import java.lang.Class;
 import java.lang.Exception;
+import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
@@ -19,6 +22,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.Callable;
+import kotlin.Unit;
+import kotlin.coroutines.Continuation;
 
 @SuppressWarnings({"unchecked", "deprecation"})
 public final class SleepDatabaseDao_Impl implements SleepDatabaseDao {
@@ -71,75 +76,95 @@ public final class SleepDatabaseDao_Impl implements SleepDatabaseDao {
   }
 
   @Override
-  public void insert(final SleepNight night) {
-    __db.assertNotSuspendingTransaction();
-    __db.beginTransaction();
-    try {
-      __insertionAdapterOfSleepNight.insert(night);
-      __db.setTransactionSuccessful();
-    } finally {
-      __db.endTransaction();
-    }
+  public Object insert(final SleepNight night, final Continuation<? super Unit> continuation) {
+    return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
+      @Override
+      public Unit call() throws Exception {
+        __db.beginTransaction();
+        try {
+          __insertionAdapterOfSleepNight.insert(night);
+          __db.setTransactionSuccessful();
+          return Unit.INSTANCE;
+        } finally {
+          __db.endTransaction();
+        }
+      }
+    }, continuation);
   }
 
   @Override
-  public void update(final SleepNight night) {
-    __db.assertNotSuspendingTransaction();
-    __db.beginTransaction();
-    try {
-      __updateAdapterOfSleepNight.handle(night);
-      __db.setTransactionSuccessful();
-    } finally {
-      __db.endTransaction();
-    }
+  public Object update(final SleepNight night, final Continuation<? super Unit> continuation) {
+    return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
+      @Override
+      public Unit call() throws Exception {
+        __db.beginTransaction();
+        try {
+          __updateAdapterOfSleepNight.handle(night);
+          __db.setTransactionSuccessful();
+          return Unit.INSTANCE;
+        } finally {
+          __db.endTransaction();
+        }
+      }
+    }, continuation);
   }
 
   @Override
-  public void clear() {
-    __db.assertNotSuspendingTransaction();
-    final SupportSQLiteStatement _stmt = __preparedStmtOfClear.acquire();
-    __db.beginTransaction();
-    try {
-      _stmt.executeUpdateDelete();
-      __db.setTransactionSuccessful();
-    } finally {
-      __db.endTransaction();
-      __preparedStmtOfClear.release(_stmt);
-    }
+  public Object clear(final Continuation<? super Unit> continuation) {
+    return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
+      @Override
+      public Unit call() throws Exception {
+        final SupportSQLiteStatement _stmt = __preparedStmtOfClear.acquire();
+        __db.beginTransaction();
+        try {
+          _stmt.executeUpdateDelete();
+          __db.setTransactionSuccessful();
+          return Unit.INSTANCE;
+        } finally {
+          __db.endTransaction();
+          __preparedStmtOfClear.release(_stmt);
+        }
+      }
+    }, continuation);
   }
 
   @Override
-  public SleepNight get(final long key) {
+  public Object get(final long key, final Continuation<? super SleepNight> continuation) {
     final String _sql = "SELECT * from daily_sleep_quality_table WHERE nightId = ?";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
     _statement.bindLong(_argIndex, key);
-    __db.assertNotSuspendingTransaction();
-    final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
-    try {
-      final int _cursorIndexOfNightId = CursorUtil.getColumnIndexOrThrow(_cursor, "nightId");
-      final int _cursorIndexOfStartTimeMilli = CursorUtil.getColumnIndexOrThrow(_cursor, "start_time_milli");
-      final int _cursorIndexOfEndTimeMilli = CursorUtil.getColumnIndexOrThrow(_cursor, "end_time_milli");
-      final int _cursorIndexOfSleepQuality = CursorUtil.getColumnIndexOrThrow(_cursor, "quality_rating");
-      final SleepNight _result;
-      if(_cursor.moveToFirst()) {
-        final long _tmpNightId;
-        _tmpNightId = _cursor.getLong(_cursorIndexOfNightId);
-        final long _tmpStartTimeMilli;
-        _tmpStartTimeMilli = _cursor.getLong(_cursorIndexOfStartTimeMilli);
-        final long _tmpEndTimeMilli;
-        _tmpEndTimeMilli = _cursor.getLong(_cursorIndexOfEndTimeMilli);
-        final int _tmpSleepQuality;
-        _tmpSleepQuality = _cursor.getInt(_cursorIndexOfSleepQuality);
-        _result = new SleepNight(_tmpNightId,_tmpStartTimeMilli,_tmpEndTimeMilli,_tmpSleepQuality);
-      } else {
-        _result = null;
+    final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
+    return CoroutinesRoom.execute(__db, false, _cancellationSignal, new Callable<SleepNight>() {
+      @Override
+      public SleepNight call() throws Exception {
+        final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+        try {
+          final int _cursorIndexOfNightId = CursorUtil.getColumnIndexOrThrow(_cursor, "nightId");
+          final int _cursorIndexOfStartTimeMilli = CursorUtil.getColumnIndexOrThrow(_cursor, "start_time_milli");
+          final int _cursorIndexOfEndTimeMilli = CursorUtil.getColumnIndexOrThrow(_cursor, "end_time_milli");
+          final int _cursorIndexOfSleepQuality = CursorUtil.getColumnIndexOrThrow(_cursor, "quality_rating");
+          final SleepNight _result;
+          if(_cursor.moveToFirst()) {
+            final long _tmpNightId;
+            _tmpNightId = _cursor.getLong(_cursorIndexOfNightId);
+            final long _tmpStartTimeMilli;
+            _tmpStartTimeMilli = _cursor.getLong(_cursorIndexOfStartTimeMilli);
+            final long _tmpEndTimeMilli;
+            _tmpEndTimeMilli = _cursor.getLong(_cursorIndexOfEndTimeMilli);
+            final int _tmpSleepQuality;
+            _tmpSleepQuality = _cursor.getInt(_cursorIndexOfSleepQuality);
+            _result = new SleepNight(_tmpNightId,_tmpStartTimeMilli,_tmpEndTimeMilli,_tmpSleepQuality);
+          } else {
+            _result = null;
+          }
+          return _result;
+        } finally {
+          _cursor.close();
+          _statement.release();
+        }
       }
-      return _result;
-    } finally {
-      _cursor.close();
-      _statement.release();
-    }
+    }, continuation);
   }
 
   @Override
@@ -183,35 +208,40 @@ public final class SleepDatabaseDao_Impl implements SleepDatabaseDao {
   }
 
   @Override
-  public SleepNight getToNight() {
+  public Object getToNight(final Continuation<? super SleepNight> continuation) {
     final String _sql = "SELECT * FROM daily_sleep_quality_table ORDER BY nightId DESC LIMIT 1";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
-    __db.assertNotSuspendingTransaction();
-    final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
-    try {
-      final int _cursorIndexOfNightId = CursorUtil.getColumnIndexOrThrow(_cursor, "nightId");
-      final int _cursorIndexOfStartTimeMilli = CursorUtil.getColumnIndexOrThrow(_cursor, "start_time_milli");
-      final int _cursorIndexOfEndTimeMilli = CursorUtil.getColumnIndexOrThrow(_cursor, "end_time_milli");
-      final int _cursorIndexOfSleepQuality = CursorUtil.getColumnIndexOrThrow(_cursor, "quality_rating");
-      final SleepNight _result;
-      if(_cursor.moveToFirst()) {
-        final long _tmpNightId;
-        _tmpNightId = _cursor.getLong(_cursorIndexOfNightId);
-        final long _tmpStartTimeMilli;
-        _tmpStartTimeMilli = _cursor.getLong(_cursorIndexOfStartTimeMilli);
-        final long _tmpEndTimeMilli;
-        _tmpEndTimeMilli = _cursor.getLong(_cursorIndexOfEndTimeMilli);
-        final int _tmpSleepQuality;
-        _tmpSleepQuality = _cursor.getInt(_cursorIndexOfSleepQuality);
-        _result = new SleepNight(_tmpNightId,_tmpStartTimeMilli,_tmpEndTimeMilli,_tmpSleepQuality);
-      } else {
-        _result = null;
+    final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
+    return CoroutinesRoom.execute(__db, false, _cancellationSignal, new Callable<SleepNight>() {
+      @Override
+      public SleepNight call() throws Exception {
+        final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+        try {
+          final int _cursorIndexOfNightId = CursorUtil.getColumnIndexOrThrow(_cursor, "nightId");
+          final int _cursorIndexOfStartTimeMilli = CursorUtil.getColumnIndexOrThrow(_cursor, "start_time_milli");
+          final int _cursorIndexOfEndTimeMilli = CursorUtil.getColumnIndexOrThrow(_cursor, "end_time_milli");
+          final int _cursorIndexOfSleepQuality = CursorUtil.getColumnIndexOrThrow(_cursor, "quality_rating");
+          final SleepNight _result;
+          if(_cursor.moveToFirst()) {
+            final long _tmpNightId;
+            _tmpNightId = _cursor.getLong(_cursorIndexOfNightId);
+            final long _tmpStartTimeMilli;
+            _tmpStartTimeMilli = _cursor.getLong(_cursorIndexOfStartTimeMilli);
+            final long _tmpEndTimeMilli;
+            _tmpEndTimeMilli = _cursor.getLong(_cursorIndexOfEndTimeMilli);
+            final int _tmpSleepQuality;
+            _tmpSleepQuality = _cursor.getInt(_cursorIndexOfSleepQuality);
+            _result = new SleepNight(_tmpNightId,_tmpStartTimeMilli,_tmpEndTimeMilli,_tmpSleepQuality);
+          } else {
+            _result = null;
+          }
+          return _result;
+        } finally {
+          _cursor.close();
+          _statement.release();
+        }
       }
-      return _result;
-    } finally {
-      _cursor.close();
-      _statement.release();
-    }
+    }, continuation);
   }
 
   public static List<Class<?>> getRequiredConverters() {

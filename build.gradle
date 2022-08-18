@@ -9,6 +9,7 @@ buildscript {
         coroutine_version = '1.6.4'
         gradleVersion = '7.3.3'
         navigationVersion = '2.5.1'
+        room_version = '2.4.3'
         dataBindingCompilerVersion = gradleVersion // Always need to be the same.
     }
 
