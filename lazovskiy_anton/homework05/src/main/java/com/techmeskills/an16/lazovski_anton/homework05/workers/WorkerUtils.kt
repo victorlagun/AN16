@@ -37,9 +37,10 @@ import com.example.background.DELAY_TIME_MILLIS
 import com.example.background.NOTIFICATION_ID
 import com.example.background.NOTIFICATION_TITLE
 import com.example.background.OUTPUT_PATH
-import com.example.background.R
+
 import com.example.background.VERBOSE_NOTIFICATION_CHANNEL_DESCRIPTION
 import com.example.background.VERBOSE_NOTIFICATION_CHANNEL_NAME
+import com.techmeskills.an16.lazovski_anton.homework05.R
 import java.io.File
 import java.io.FileNotFoundException
 import java.io.FileOutputStream

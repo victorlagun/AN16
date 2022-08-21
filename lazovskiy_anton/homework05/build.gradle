@@ -10,7 +10,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.example.android.marsrealestate"
+        applicationId "com.example.android.lazovski_anton.homework05"
         minSdk 22
         targetSdk 32
         versionCode 1
@@ -78,7 +78,7 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutine_version"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutine_version"
 
-    // Retrofit
+     //Retrofit
     implementation "com.squareup.retrofit2:retrofit:$version_retrofit"
     implementation "com.squareup.retrofit2:converter-moshi:$version_retrofit"
 
