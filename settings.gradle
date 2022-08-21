@@ -26,6 +26,8 @@ def modules = [
 
         ':lazovskiy_anton-homework01'    : 'lazovskiy_anton/homework01',
 
+        ':lazovskiy_anton-homework05'    : 'lazovskiy_anton/homework05',
+
         ':miseyko_denis-homework01'      : 'miseyko_denis/homework01',
 
         ':miseyko_denis-homework02'      : 'miseyko_denis/homework02',
