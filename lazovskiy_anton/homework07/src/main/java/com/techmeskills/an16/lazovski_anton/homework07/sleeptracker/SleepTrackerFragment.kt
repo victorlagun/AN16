@@ -22,12 +22,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.android.trackmysleepquality.database.SleepDatabase
 import com.example.android.trackmysleepquality.sleeptracker.SleepTrackerViewModelFactory
-import com.techmeskills.an16.lazovski_anton.homework04.R
 import com.techmeskills.an16.lazovski_anton.homework04.adapter.SleepNightAdapter
-import com.techmeskills.an16.lazovski_anton.homework04.databinding.FragmentSleepTrackerBinding
+import com.techmeskills.an16.lazovski_anton.homework07.R
+import com.techmeskills.an16.lazovski_anton.homework07.databinding.FragmentSleepTrackerBinding
 import kotlinx.android.synthetic.main.fragment_sleep_tracker.*
 
 /**
@@ -58,11 +59,18 @@ class SleepTrackerFragment : Fragment() {
         val sleepTrackerViewModel = ViewModelProvider(this, viewModelFactory).get(
             SleepTrackerViewModel::class.java)
 
+
         binding.setLifecycleOwner(this)
 
         binding.sleepTrackerViewModel = sleepTrackerViewModel
         val adapter = SleepNightAdapter()
         binding.sleepList.adapter = adapter
+
+        sleepTrackerViewModel.nights.observe(viewLifecycleOwner, Observer {
+            it?.let {
+                adapter.submitList(it)
+            }
+        })
         return binding.root
     }
 }

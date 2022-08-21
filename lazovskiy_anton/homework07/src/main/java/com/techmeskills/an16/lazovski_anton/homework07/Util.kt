@@ -23,7 +23,7 @@ import android.text.Html
 import android.text.Spanned
 import androidx.core.text.HtmlCompat
 import com.example.android.trackmysleepquality.database.SleepNight
-import com.techmeskills.an16.lazovski_anton.homework04.R
+import com.techmeskills.an16.lazovski_anton.homework07.R
 import java.text.SimpleDateFormat
 import java.util.*
 import java.util.concurrent.TimeUnit
