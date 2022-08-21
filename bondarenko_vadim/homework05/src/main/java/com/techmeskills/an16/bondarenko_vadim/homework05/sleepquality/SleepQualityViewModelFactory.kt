@@ -15,3 +15,22 @@
  */
 
 package com.techmeskills.an16.bondarenko_vadim.homework05.sleepquality
+
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.viewmodel.CreationExtras
+import com.techmeskills.an16.bondarenko_vadim.homework05.database.SleepDatabaseDao
+
+
+
+class SleepQualityViewModelFactory(
+    private val sleepNightKey: Long,
+    private val dataSource: SleepDatabaseDao): ViewModelProvider.Factory {
+    @Suppress("unchecked_cast")
+    override fun <T : ViewModel> create(modelClass: Class<T>, extras: CreationExtras): T {
+        if (modelClass.isAssignableFrom(SleepQualityViewModel::class.java)) {
+            return SleepQualityViewModel(sleepNightKey, dataSource) as T
+        }
+        throw IllegalArgumentException("Unknown ViewModel class")
+    }
+}

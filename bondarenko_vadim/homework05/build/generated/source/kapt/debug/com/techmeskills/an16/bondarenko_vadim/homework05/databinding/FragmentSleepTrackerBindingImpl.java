@@ -33,7 +33,7 @@ public class FragmentSleepTrackerBindingImpl extends FragmentSleepTrackerBinding
         this(bindingComponent, root, mapBindings(bindingComponent, root, 5, sIncludes, sViewsWithIds));
     }
     private FragmentSleepTrackerBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
-        super(bindingComponent, root, 1
+        super(bindingComponent, root, 4
             , (android.widget.Button) bindings[3]
             , (android.widget.Button) bindings[1]
             , (android.widget.Button) bindings[2]
@@ -56,7 +56,7 @@ public class FragmentSleepTrackerBindingImpl extends FragmentSleepTrackerBinding
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x4L;
+                mDirtyFlags = 0x20L;
         }
         requestRebind();
     }
@@ -86,7 +86,7 @@ public class FragmentSleepTrackerBindingImpl extends FragmentSleepTrackerBinding
     public void setSleepTrackerViewModel(@Nullable com.techmeskills.an16.bondarenko_vadim.homework05.sleeptracker.SleepTrackerViewModel SleepTrackerViewModel) {
         this.mSleepTrackerViewModel = SleepTrackerViewModel;
         synchronized(this) {
-            mDirtyFlags |= 0x2L;
+            mDirtyFlags |= 0x10L;
         }
         notifyPropertyChanged(BR.sleepTrackerViewModel);
         super.requestRebind();
@@ -97,6 +97,12 @@ public class FragmentSleepTrackerBindingImpl extends FragmentSleepTrackerBinding
         switch (localFieldId) {
             case 0 :
                 return onChangeSleepTrackerViewModelNightString((androidx.lifecycle.LiveData<android.text.Spanned>) object, fieldId);
+            case 1 :
+                return onChangeSleepTrackerViewModelStartButtonVisible((androidx.lifecycle.LiveData<java.lang.Boolean>) object, fieldId);
+            case 2 :
+                return onChangeSleepTrackerViewModelStopButtonVisible((androidx.lifecycle.LiveData<java.lang.Boolean>) object, fieldId);
+            case 3 :
+                return onChangeSleepTrackerViewModelClearButtonVisible((androidx.lifecycle.LiveData<java.lang.Boolean>) object, fieldId);
         }
         return false;
     }
@@ -104,6 +110,33 @@ public class FragmentSleepTrackerBindingImpl extends FragmentSleepTrackerBinding
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
+            }
+            return true;
+        }
+        return false;
+    }
+    private boolean onChangeSleepTrackerViewModelStartButtonVisible(androidx.lifecycle.LiveData<java.lang.Boolean> SleepTrackerViewModelStartButtonVisible, int fieldId) {
+        if (fieldId == BR._all) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x2L;
+            }
+            return true;
+        }
+        return false;
+    }
+    private boolean onChangeSleepTrackerViewModelStopButtonVisible(androidx.lifecycle.LiveData<java.lang.Boolean> SleepTrackerViewModelStopButtonVisible, int fieldId) {
+        if (fieldId == BR._all) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x4L;
+            }
+            return true;
+        }
+        return false;
+    }
+    private boolean onChangeSleepTrackerViewModelClearButtonVisible(androidx.lifecycle.LiveData<java.lang.Boolean> SleepTrackerViewModelClearButtonVisible, int fieldId) {
+        if (fieldId == BR._all) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x8L;
             }
             return true;
         }
@@ -118,34 +151,114 @@ public class FragmentSleepTrackerBindingImpl extends FragmentSleepTrackerBinding
             mDirtyFlags = 0;
         }
         androidx.lifecycle.LiveData<android.text.Spanned> sleepTrackerViewModelNightString = null;
+        androidx.lifecycle.LiveData<java.lang.Boolean> sleepTrackerViewModelStartButtonVisible = null;
+        androidx.lifecycle.LiveData<java.lang.Boolean> sleepTrackerViewModelStopButtonVisible = null;
+        java.lang.Boolean sleepTrackerViewModelStartButtonVisibleGetValue = null;
+        java.lang.Boolean sleepTrackerViewModelStopButtonVisibleGetValue = null;
+        java.lang.Boolean sleepTrackerViewModelClearButtonVisibleGetValue = null;
+        boolean androidxDatabindingViewDataBindingSafeUnboxSleepTrackerViewModelStopButtonVisibleGetValue = false;
         android.text.Spanned sleepTrackerViewModelNightStringGetValue = null;
+        boolean androidxDatabindingViewDataBindingSafeUnboxSleepTrackerViewModelStartButtonVisibleGetValue = false;
+        boolean androidxDatabindingViewDataBindingSafeUnboxSleepTrackerViewModelClearButtonVisibleGetValue = false;
         com.techmeskills.an16.bondarenko_vadim.homework05.sleeptracker.SleepTrackerViewModel sleepTrackerViewModel = mSleepTrackerViewModel;
+        androidx.lifecycle.LiveData<java.lang.Boolean> sleepTrackerViewModelClearButtonVisible = null;
 
-        if ((dirtyFlags & 0x7L) != 0) {
-
-
-
-                if (sleepTrackerViewModel != null) {
-                    // read sleepTrackerViewModel.nightString
-                    sleepTrackerViewModelNightString = sleepTrackerViewModel.getNightString();
-                }
-                updateLiveDataRegistration(0, sleepTrackerViewModelNightString);
+        if ((dirtyFlags & 0x3fL) != 0) {
 
 
-                if (sleepTrackerViewModelNightString != null) {
-                    // read sleepTrackerViewModel.nightString.getValue()
-                    sleepTrackerViewModelNightStringGetValue = sleepTrackerViewModelNightString.getValue();
-                }
+            if ((dirtyFlags & 0x31L) != 0) {
+
+                    if (sleepTrackerViewModel != null) {
+                        // read sleepTrackerViewModel.nightString
+                        sleepTrackerViewModelNightString = sleepTrackerViewModel.getNightString();
+                    }
+                    updateLiveDataRegistration(0, sleepTrackerViewModelNightString);
+
+
+                    if (sleepTrackerViewModelNightString != null) {
+                        // read sleepTrackerViewModel.nightString.getValue()
+                        sleepTrackerViewModelNightStringGetValue = sleepTrackerViewModelNightString.getValue();
+                    }
+            }
+            if ((dirtyFlags & 0x32L) != 0) {
+
+                    if (sleepTrackerViewModel != null) {
+                        // read sleepTrackerViewModel.startButtonVisible
+                        sleepTrackerViewModelStartButtonVisible = sleepTrackerViewModel.getStartButtonVisible();
+                    }
+                    updateLiveDataRegistration(1, sleepTrackerViewModelStartButtonVisible);
+
+
+                    if (sleepTrackerViewModelStartButtonVisible != null) {
+                        // read sleepTrackerViewModel.startButtonVisible.getValue()
+                        sleepTrackerViewModelStartButtonVisibleGetValue = sleepTrackerViewModelStartButtonVisible.getValue();
+                    }
+
+
+                    // read androidx.databinding.ViewDataBinding.safeUnbox(sleepTrackerViewModel.startButtonVisible.getValue())
+                    androidxDatabindingViewDataBindingSafeUnboxSleepTrackerViewModelStartButtonVisibleGetValue = androidx.databinding.ViewDataBinding.safeUnbox(sleepTrackerViewModelStartButtonVisibleGetValue);
+            }
+            if ((dirtyFlags & 0x34L) != 0) {
+
+                    if (sleepTrackerViewModel != null) {
+                        // read sleepTrackerViewModel.stopButtonVisible
+                        sleepTrackerViewModelStopButtonVisible = sleepTrackerViewModel.getStopButtonVisible();
+                    }
+                    updateLiveDataRegistration(2, sleepTrackerViewModelStopButtonVisible);
+
+
+                    if (sleepTrackerViewModelStopButtonVisible != null) {
+                        // read sleepTrackerViewModel.stopButtonVisible.getValue()
+                        sleepTrackerViewModelStopButtonVisibleGetValue = sleepTrackerViewModelStopButtonVisible.getValue();
+                    }
+
+
+                    // read androidx.databinding.ViewDataBinding.safeUnbox(sleepTrackerViewModel.stopButtonVisible.getValue())
+                    androidxDatabindingViewDataBindingSafeUnboxSleepTrackerViewModelStopButtonVisibleGetValue = androidx.databinding.ViewDataBinding.safeUnbox(sleepTrackerViewModelStopButtonVisibleGetValue);
+            }
+            if ((dirtyFlags & 0x38L) != 0) {
+
+                    if (sleepTrackerViewModel != null) {
+                        // read sleepTrackerViewModel.clearButtonVisible
+                        sleepTrackerViewModelClearButtonVisible = sleepTrackerViewModel.getClearButtonVisible();
+                    }
+                    updateLiveDataRegistration(3, sleepTrackerViewModelClearButtonVisible);
+
+
+                    if (sleepTrackerViewModelClearButtonVisible != null) {
+                        // read sleepTrackerViewModel.clearButtonVisible.getValue()
+                        sleepTrackerViewModelClearButtonVisibleGetValue = sleepTrackerViewModelClearButtonVisible.getValue();
+                    }
+
+
+                    // read androidx.databinding.ViewDataBinding.safeUnbox(sleepTrackerViewModel.clearButtonVisible.getValue())
+                    androidxDatabindingViewDataBindingSafeUnboxSleepTrackerViewModelClearButtonVisibleGetValue = androidx.databinding.ViewDataBinding.safeUnbox(sleepTrackerViewModelClearButtonVisibleGetValue);
+            }
         }
         // batch finished
-        if ((dirtyFlags & 0x4L) != 0) {
+        if ((dirtyFlags & 0x38L) != 0) {
+            // api target 1
+
+            this.clearButton.setEnabled(androidxDatabindingViewDataBindingSafeUnboxSleepTrackerViewModelClearButtonVisibleGetValue);
+        }
+        if ((dirtyFlags & 0x20L) != 0) {
             // api target 1
 
             this.clearButton.setOnClickListener(mCallback3);
             this.startButton.setOnClickListener(mCallback1);
             this.stopButton.setOnClickListener(mCallback2);
         }
-        if ((dirtyFlags & 0x7L) != 0) {
+        if ((dirtyFlags & 0x32L) != 0) {
+            // api target 1
+
+            this.startButton.setEnabled(androidxDatabindingViewDataBindingSafeUnboxSleepTrackerViewModelStartButtonVisibleGetValue);
+        }
+        if ((dirtyFlags & 0x34L) != 0) {
+            // api target 1
+
+            this.stopButton.setEnabled(androidxDatabindingViewDataBindingSafeUnboxSleepTrackerViewModelStopButtonVisibleGetValue);
+        }
+        if ((dirtyFlags & 0x31L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.titleText, sleepTrackerViewModelNightStringGetValue);
@@ -212,8 +325,11 @@ public class FragmentSleepTrackerBindingImpl extends FragmentSleepTrackerBinding
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): sleepTrackerViewModel.nightString
-        flag 1 (0x2L): sleepTrackerViewModel
-        flag 2 (0x3L): null
+        flag 1 (0x2L): sleepTrackerViewModel.startButtonVisible
+        flag 2 (0x3L): sleepTrackerViewModel.stopButtonVisible
+        flag 3 (0x4L): sleepTrackerViewModel.clearButtonVisible
+        flag 4 (0x5L): sleepTrackerViewModel
+        flag 5 (0x6L): null
     flag mapping end*/
     //end
 }
