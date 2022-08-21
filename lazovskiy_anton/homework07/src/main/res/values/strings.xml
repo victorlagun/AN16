@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">AN16</string>
+    <string name="minutes_length">%d minutes on %s</string>
+    <string name="hours_length">%d hours on %s</string>
+    <string name="seconds_length">%d seconds on %s</string>
 </resources>
