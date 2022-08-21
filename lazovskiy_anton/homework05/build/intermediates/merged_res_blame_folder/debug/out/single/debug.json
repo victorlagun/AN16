@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "com.example.background.app-merged_res-56:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.background.app-main-58:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.background.app-merged_res-56:/drawable_android_cupcake.png.flat",
+        "source": "com.example.background.app-main-58:/drawable/android_cupcake.png"
+    },
+    {
+        "merged": "com.example.background.app-merged_res-56:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.background.app-main-58:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.background.app-merged_res-56:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.background.app-main-58:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.background.app-merged_res-56:/drawable_test.jpg.flat",
+        "source": "com.example.background.app-main-58:/drawable/test.jpg"
+    },
+    {
+        "merged": "com.example.background.app-merged_res-56:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.background.app-main-58:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.background.app-merged_res-56:/layout_activity_blur.xml.flat",
+        "source": "com.example.background.app-main-58:/layout/activity_blur.xml"
+    }
+]
