@@ -23,6 +23,9 @@
      the whole ViewModel, so that we can access the LiveData,
      click handlers, and state variables. -->
     
+                 
+                                        
+                                                                                                          
 
            
 
@@ -33,6 +36,7 @@
         tools:context=".sleepquality.SleepQualityFragment" android:tag="layout/fragment_sleep_quality_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
 
         <TextView
+
             android:id="@+id/title_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -47,6 +51,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
+            android:tag="binding_1"                                              
             android:id="@+id/quality_zero_image"
             android:layout_width="@dimen/icon_size"
             android:layout_height="@dimen/icon_size"
@@ -59,6 +64,7 @@
             app:srcCompat="@drawable/ic_sleep_0" />
 
         <ImageView
+            android:tag="binding_2"                                              
             android:id="@+id/quality_one_image"
             android:layout_width="@dimen/icon_size"
             android:layout_height="@dimen/icon_size"
@@ -69,6 +75,7 @@
             app:srcCompat="@drawable/ic_sleep_1" />
 
         <ImageView
+            android:tag="binding_3"                                              
             android:id="@+id/quality_two_image"
             android:layout_width="@dimen/icon_size"
             android:layout_height="@dimen/icon_size"
@@ -80,6 +87,7 @@
             app:srcCompat="@drawable/ic_sleep_2" />
 
         <ImageView
+            android:tag="binding_4"                                              
             android:id="@+id/quality_three_image"
             android:layout_width="@dimen/icon_size"
             android:layout_height="@dimen/icon_size"
@@ -95,6 +103,7 @@
             app:srcCompat="@drawable/ic_sleep_3" />
 
         <ImageView
+            android:tag="binding_5"                                              
             android:id="@+id/quality_four_image"
             android:layout_width="@dimen/icon_size"
             android:layout_height="@dimen/icon_size"
@@ -106,6 +115,7 @@
             app:srcCompat="@drawable/ic_sleep_4" />
 
         <ImageView
+            android:tag="binding_6"                                              
             android:id="@+id/quality_five_image"
             android:layout_width="@dimen/icon_size"
             android:layout_height="@dimen/icon_size"

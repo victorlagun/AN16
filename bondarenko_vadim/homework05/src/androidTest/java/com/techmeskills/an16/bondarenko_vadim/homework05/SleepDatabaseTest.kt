@@ -19,9 +19,9 @@ package com.techmeskills.an16.bondarenko_vadim.homework04
 import androidx.room.Room
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import com.techmeskills.an16.bondarenko_vadim.homework04.database.SleepDatabase
-import com.techmeskills.an16.bondarenko_vadim.homework04.database.SleepDatabaseDao
-import com.techmeskills.an16.bondarenko_vadim.homework04.database.SleepNight
+import com.techmeskills.an16.bondarenko_vadim.homework05.database.SleepDatabase
+import com.techmeskills.an16.bondarenko_vadim.homework05.database.SleepDatabaseDao
+import com.techmeskills.an16.bondarenko_vadim.homework05.database.SleepNight
 import org.junit.Assert.assertEquals
 import org.junit.After
 import org.junit.Before
@@ -62,7 +62,7 @@ class SleepDatabaseTest {
 
     @Test
     @Throws(Exception::class)
-    fun insertAndGetNight() {
+    suspend fun insertAndGetNight() {
         val night = SleepNight()
         sleepDao.insert(night)
         val tonight = sleepDao.getToNight()
