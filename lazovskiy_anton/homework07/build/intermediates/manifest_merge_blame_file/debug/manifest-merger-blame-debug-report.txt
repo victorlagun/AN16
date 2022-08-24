@@ -1,0 +1,59 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.techmeskills.an16.lazovski_anton.homework07"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="22"
+8-->C:\Users\anton\AndroidStudioProjects\AN16.git\lazovskiy_anton\homework07\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="32" />
+9-->C:\Users\anton\AndroidStudioProjects\AN16.git\lazovskiy_anton\homework07\src\main\AndroidManifest.xml
+10
+11    <application
+11-->C:\Users\anton\AndroidStudioProjects\AN16.git\lazovskiy_anton\homework07\src\main\AndroidManifest.xml:6:5-12:19
+12        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+12-->[androidx.core:core:1.8.0] C:\Users\anton\.gradle\caches\transforms-3\5c21b1ef403a8aa183859899acb645fe\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
+13        android:debuggable="true"
+14        android:theme="@style/Theme.AN16" >
+14-->C:\Users\anton\AndroidStudioProjects\AN16.git\lazovskiy_anton\homework07\src\main\AndroidManifest.xml:7:9-42
+15        <activity
+15-->C:\Users\anton\AndroidStudioProjects\AN16.git\lazovskiy_anton\homework07\src\main\AndroidManifest.xml:9:9-11:40
+16            android:name="com.techmeskills.an16.lazovski_anton.homework07.MainActivity"
+16-->C:\Users\anton\AndroidStudioProjects\AN16.git\lazovskiy_anton\homework07\src\main\AndroidManifest.xml:10:13-41
+17            android:exported="false" />
+17-->C:\Users\anton\AndroidStudioProjects\AN16.git\lazovskiy_anton\homework07\src\main\AndroidManifest.xml:11:13-37
+18
+19        <provider
+19-->[androidx.emoji2:emoji2:1.0.0] C:\Users\anton\.gradle\caches\transforms-3\fb9462ac0b66ac07527d19c4518f47ac\transformed\emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+20            android:name="androidx.startup.InitializationProvider"
+20-->[androidx.emoji2:emoji2:1.0.0] C:\Users\anton\.gradle\caches\transforms-3\fb9462ac0b66ac07527d19c4518f47ac\transformed\emoji2-1.0.0\AndroidManifest.xml:27:13-67
+21            android:authorities="com.techmeskills.an16.lazovski_anton.homework07.androidx-startup"
+21-->[androidx.emoji2:emoji2:1.0.0] C:\Users\anton\.gradle\caches\transforms-3\fb9462ac0b66ac07527d19c4518f47ac\transformed\emoji2-1.0.0\AndroidManifest.xml:28:13-68
+22            android:exported="false" >
+22-->[androidx.emoji2:emoji2:1.0.0] C:\Users\anton\.gradle\caches\transforms-3\fb9462ac0b66ac07527d19c4518f47ac\transformed\emoji2-1.0.0\AndroidManifest.xml:29:13-37
+23            <meta-data
+23-->[androidx.emoji2:emoji2:1.0.0] C:\Users\anton\.gradle\caches\transforms-3\fb9462ac0b66ac07527d19c4518f47ac\transformed\emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+24                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+24-->[androidx.emoji2:emoji2:1.0.0] C:\Users\anton\.gradle\caches\transforms-3\fb9462ac0b66ac07527d19c4518f47ac\transformed\emoji2-1.0.0\AndroidManifest.xml:32:17-75
+25                android:value="androidx.startup" />
+25-->[androidx.emoji2:emoji2:1.0.0] C:\Users\anton\.gradle\caches\transforms-3\fb9462ac0b66ac07527d19c4518f47ac\transformed\emoji2-1.0.0\AndroidManifest.xml:33:17-49
+26            <meta-data
+26-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\anton\.gradle\caches\transforms-3\7ad09284b457bda5dbc8589f719c6df9\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+27                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+27-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\anton\.gradle\caches\transforms-3\7ad09284b457bda5dbc8589f719c6df9\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+28                android:value="androidx.startup" />
+28-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\anton\.gradle\caches\transforms-3\7ad09284b457bda5dbc8589f719c6df9\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+29        </provider>
+30
+31        <service
+31-->[androidx.room:room-runtime:2.4.3] C:\Users\anton\.gradle\caches\transforms-3\f2aa049813c1da44008d0222e0745332\transformed\room-runtime-2.4.3\AndroidManifest.xml:25:9-28:40
+32            android:name="androidx.room.MultiInstanceInvalidationService"
+32-->[androidx.room:room-runtime:2.4.3] C:\Users\anton\.gradle\caches\transforms-3\f2aa049813c1da44008d0222e0745332\transformed\room-runtime-2.4.3\AndroidManifest.xml:26:13-74
+33            android:directBootAware="true"
+33-->[androidx.room:room-runtime:2.4.3] C:\Users\anton\.gradle\caches\transforms-3\f2aa049813c1da44008d0222e0745332\transformed\room-runtime-2.4.3\AndroidManifest.xml:27:13-43
+34            android:exported="false" />
+34-->[androidx.room:room-runtime:2.4.3] C:\Users\anton\.gradle\caches\transforms-3\f2aa049813c1da44008d0222e0745332\transformed\room-runtime-2.4.3\AndroidManifest.xml:28:13-37
+35    </application>
+36
+37</manifest>
