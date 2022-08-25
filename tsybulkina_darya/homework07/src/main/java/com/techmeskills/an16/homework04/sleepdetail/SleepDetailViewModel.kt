@@ -1,20 +1,27 @@
 package com.techmeskills.an16.homework04.sleepdetail
 
+import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.techmeskills.an16.homework04.database.SleepDatabaseDao
 import com.techmeskills.an16.homework04.database.SleepNight
+import com.techmeskills.an16.homework04.getAppComponent
+import javax.inject.Inject
 
 class SleepDetailViewModel (
+    private val context: Context,
     private val sleepNightKey: Long = 0L,
-    dataSource: SleepDatabaseDao
 ) : ViewModel() {
 
+    init {
+        context.getAppComponent().inject(this)
+    }
     /**
      * Hold a reference to SleepDatabase via its SleepDatabaseDao.
      */
-    val database = dataSource
+    @Inject
+    lateinit var database :SleepDatabaseDao
 
     private val night: LiveData<SleepNight>
 
