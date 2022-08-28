@@ -22,13 +22,14 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.android.marsrealestate.databinding.GridViewItemBinding
 import com.example.android.marsrealestate.network.MarsProperty
+import fake.`package`.name.`for`.sync.databinding.GridViewItemBinding
 
 class PhotoGridAdapter (private val onClickListener: OnClickListener ): ListAdapter<MarsProperty,
         PhotoGridAdapter.MarsPropertyViewHolder>(DiffCallback) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PhotoGridAdapter.MarsPropertyViewHolder {
-        return MarsPropertyViewHolder(GridViewItemBinding.inflate(
+        return MarsPropertyViewHolder(
+            GridViewItemBinding.inflate(
             LayoutInflater.from(parent.context)))
     }
 

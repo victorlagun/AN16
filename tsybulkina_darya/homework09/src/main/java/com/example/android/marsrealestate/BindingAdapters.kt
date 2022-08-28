@@ -27,6 +27,7 @@ import com.bumptech.glide.request.RequestOptions
 import com.example.android.marsrealestate.network.MarsProperty
 import com.example.android.marsrealestate.overview.OverviewViewModel
 import com.example.android.marsrealestate.overview.PhotoGridAdapter
+import fake.`package`.name.`for`.sync.R
 
 @BindingAdapter("imageUrl")
 fun bindImage(imgView: ImageView, imgUrl: String?) {

@@ -19,6 +19,7 @@ package com.example.android.marsrealestate
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import fake.`package`.name.`for`.sync.R
 
 class MainActivity : AppCompatActivity() {
 

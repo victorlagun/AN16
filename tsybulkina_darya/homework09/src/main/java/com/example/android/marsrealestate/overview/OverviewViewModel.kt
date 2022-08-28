@@ -21,10 +21,11 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.android.marsrealestate.network.MarsApi
 import com.example.android.marsrealestate.network.MarsApiFilter
+import com.example.android.marsrealestate.network.MarsApiService
 import com.example.android.marsrealestate.network.MarsProperty
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 /**
  * The [ViewModel] that is attached to the [OverviewFragment].
@@ -48,6 +49,9 @@ class OverviewViewModel : ViewModel() {
     val navigateToSelectedProperty: LiveData<MarsProperty>
         get() = _navigateToSelectedProperty
 
+    @Inject
+    lateinit var marsApi:MarsApiService
+
     init {
         getMarsRealEstateProperties(MarsApiFilter.SHOW_ALL)
     }
@@ -56,7 +60,7 @@ class OverviewViewModel : ViewModel() {
         viewModelScope.launch {
             _status.value = MarsApiStatus.LOADING
             try {
-                _property.value = MarsApi.retrofitService.getProperties(filter.value)
+                _property.value = marsApi.getProperties(filter.value)
                 _status.value =
                     MarsApiStatus.DONE
 
