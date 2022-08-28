@@ -15,7 +15,7 @@
  *
  */
 
-package com.example.android.marsrealestate
+package com.techmeskills.an16.tsybulkiina_darya.homework09
 
 import android.view.View
 import android.widget.ImageView
@@ -24,10 +24,10 @@ import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.example.android.marsrealestate.network.MarsProperty
-import com.example.android.marsrealestate.overview.OverviewViewModel
-import com.example.android.marsrealestate.overview.PhotoGridAdapter
-import fake.`package`.name.`for`.sync.R
+import com.techmeskills.an16.tsybulkiina_darya.homework09.network.MarsProperty
+import com.techmeskills.an16.tsybulkiina_darya.homework09.overview.OverviewViewModel
+import com.techmeskills.an16.tsybulkiina_darya.homework09.overview.PhotoGridAdapter
+import com.techmeskills.an16.tsybulkina_darya.homework09.R
 
 @BindingAdapter("imageUrl")
 fun bindImage(imgView: ImageView, imgUrl: String?) {

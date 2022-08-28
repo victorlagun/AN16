@@ -15,7 +15,7 @@
  *
  */
 
-package com.example.android.marsrealestate.overview
+package com.techmeskills.an16.tsybulkiina_darya.homework09.overview
 
 import android.os.Bundle
 import android.view.*
@@ -23,9 +23,9 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import com.example.android.marsrealestate.network.MarsApiFilter
-import fake.`package`.name.`for`.sync.R
-import fake.`package`.name.`for`.sync.databinding.FragmentOverviewBinding
+import com.techmeskills.an16.tsybulkiina_darya.homework09.network.MarsApiFilter
+import com.techmeskills.an16.tsybulkina_darya.homework09.R
+import com.techmeskills.an16.tsybulkina_darya.homework09.databinding.FragmentOverviewBinding
 
 /**
  * This fragment shows the the status of the Mars real-estate web services transaction.

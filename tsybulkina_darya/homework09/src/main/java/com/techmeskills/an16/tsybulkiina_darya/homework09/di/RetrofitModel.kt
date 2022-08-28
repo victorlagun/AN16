@@ -1,6 +1,6 @@
-package com.example.android.marsrealestate.di
+package com.techmeskills.an16.tsybulkiina_darya.homework09.di
 
-import com.example.android.marsrealestate.network.MarsApiService
+import com.techmeskills.an16.tsybulkiina_darya.homework09.network.MarsApiService
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module
@@ -15,7 +15,7 @@ class RetrofitModel {
 
     @Provides
     @Singleton
-    fun getRetrofitService(retrofit: Retrofit):MarsApiService{
+    fun getRetrofitService(retrofit: Retrofit): MarsApiService {
         return retrofit.create(MarsApiService::class.java)
     }
 

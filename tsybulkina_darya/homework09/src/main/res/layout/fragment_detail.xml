@@ -24,7 +24,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.android.marsrealestate.detail.DetailViewModel" />
+            type="com.techmeskills.an16.tsybulkiina_darya.homework09.detail.DetailViewModel" />
     </data>
 
     <ScrollView

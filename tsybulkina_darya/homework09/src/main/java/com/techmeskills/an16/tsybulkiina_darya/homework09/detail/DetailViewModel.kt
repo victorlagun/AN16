@@ -14,12 +14,12 @@
  *  limitations under the License.
  */
 
-package com.example.android.marsrealestate.detail
+package com.techmeskills.an16.tsybulkiina_darya.homework09.detail
 
 import android.app.Application
 import androidx.lifecycle.*
-import com.example.android.marsrealestate.R
-import com.example.android.marsrealestate.network.MarsProperty
+import com.techmeskills.an16.tsybulkiina_darya.homework09.network.MarsProperty
+import com.techmeskills.an16.tsybulkina_darya.homework09.R
 
 /**
  * The [ViewModel] that is associated with the [DetailFragment].

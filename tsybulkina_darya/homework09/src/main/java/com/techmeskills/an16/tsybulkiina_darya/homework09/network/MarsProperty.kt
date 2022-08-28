@@ -15,20 +15,19 @@
  *
  */
 
-package com.example.android.marsrealestate
+package com.techmeskills.an16.tsybulkiina_darya.homework09.network
 
-import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
-import fake.`package`.name.`for`.sync.R
+import android.os.Parcelable
+import com.squareup.moshi.Json
+import kotlinx.android.parcel.Parcelize
 
-class MainActivity : AppCompatActivity() {
-
-    /**
-     * Our MainActivity is only responsible for setting the content view that contains the
-     * Navigation Host.
-     */
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-    }
+@Parcelize
+data class MarsProperty(
+    val id: String,
+    @Json(name = "img_src") val imgSrcUrl: String,
+    val type: String,
+    val price: Double) : Parcelable {
+    val isRental
+        get() = type == "rent"
 }
+

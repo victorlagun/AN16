@@ -15,15 +15,15 @@
  *
  */
 
-package com.example.android.marsrealestate.overview
+package com.techmeskills.an16.tsybulkiina_darya.homework09.overview
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.android.marsrealestate.network.MarsApiFilter
-import com.example.android.marsrealestate.network.MarsApiService
-import com.example.android.marsrealestate.network.MarsProperty
+import com.techmeskills.an16.tsybulkiina_darya.homework09.network.MarsApiFilter
+import com.techmeskills.an16.tsybulkiina_darya.homework09.network.MarsApiService
+import com.techmeskills.an16.tsybulkiina_darya.homework09.network.MarsProperty
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -50,13 +50,13 @@ class OverviewViewModel : ViewModel() {
         get() = _navigateToSelectedProperty
 
     @Inject
-    lateinit var marsApi:MarsApiService
+    lateinit var marsApi: MarsApiService
 
     init {
         getMarsRealEstateProperties(MarsApiFilter.SHOW_ALL)
     }
 
-    private fun getMarsRealEstateProperties(filter:MarsApiFilter) {
+    private fun getMarsRealEstateProperties(filter: MarsApiFilter) {
         viewModelScope.launch {
             _status.value = MarsApiStatus.LOADING
             try {

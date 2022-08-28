@@ -24,13 +24,13 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.android.marsrealestate.overview.OverviewViewModel" />
+            type="com.techmeskills.an16.tsybulkiina_darya.homework09.overview.OverviewViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.example.android.marsrealestate.MainActivity">
+        tools:context="com.techmeskills.an16.tsybulkiina_darya.homework09.MainActivity">
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/photos_grid"
             android:layout_width="0dp"

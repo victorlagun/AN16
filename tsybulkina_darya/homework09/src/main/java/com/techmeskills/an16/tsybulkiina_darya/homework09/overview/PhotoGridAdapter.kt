@@ -15,25 +15,25 @@
  *
  */
 
-package com.example.android.marsrealestate.overview
+package com.techmeskills.an16.tsybulkiina_darya.homework09.overview
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.android.marsrealestate.network.MarsProperty
-import fake.`package`.name.`for`.sync.databinding.GridViewItemBinding
+import com.techmeskills.an16.tsybulkiina_darya.homework09.network.MarsProperty
+import com.techmeskills.an16.tsybulkina_darya.homework09.databinding.GridViewItemBinding
 
-class PhotoGridAdapter (private val onClickListener: OnClickListener ): ListAdapter<MarsProperty,
+class PhotoGridAdapter (private val onClickListener: OnClickListener): ListAdapter<MarsProperty,
         PhotoGridAdapter.MarsPropertyViewHolder>(DiffCallback) {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PhotoGridAdapter.MarsPropertyViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MarsPropertyViewHolder {
         return MarsPropertyViewHolder(
             GridViewItemBinding.inflate(
             LayoutInflater.from(parent.context)))
     }
 
-    override fun onBindViewHolder(holder: PhotoGridAdapter.MarsPropertyViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: MarsPropertyViewHolder, position: Int) {
         val marsProperty = getItem(position)
         holder.itemView.setOnClickListener {
             onClickListener.onClick(marsProperty)
@@ -62,7 +62,7 @@ class PhotoGridAdapter (private val onClickListener: OnClickListener ): ListAdap
 
     }
 
-    class OnClickListener(val clickListener: (marsProperty:MarsProperty) -> Unit) {
-        fun onClick(marsProperty:MarsProperty) = clickListener(marsProperty)
+    class OnClickListener(val clickListener: (marsProperty: MarsProperty) -> Unit) {
+        fun onClick(marsProperty: MarsProperty) = clickListener(marsProperty)
     }
 }

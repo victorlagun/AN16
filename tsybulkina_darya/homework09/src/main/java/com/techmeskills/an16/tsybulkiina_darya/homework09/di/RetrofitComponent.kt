@@ -1,4 +1,4 @@
-package com.example.android.marsrealestate.di
+package com.techmeskills.an16.tsybulkiina_darya.homework09.di
 
 import dagger.Component
 import javax.inject.Singleton
