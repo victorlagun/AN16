@@ -30,6 +30,8 @@ def modules = [
 
         ':miseyko_denis-homework02'      : 'miseyko_denis/homework02',
 
+        ':miseyko_denis-homework09'      : 'miseyko_denis/homework09',
+
         ':shcherbakov_bogdan-homework01' : 'shcherbakov_bogdan/homework01',
 
         ':staroselets_elena-homework01'  : 'staroselets_elena/homework01',
