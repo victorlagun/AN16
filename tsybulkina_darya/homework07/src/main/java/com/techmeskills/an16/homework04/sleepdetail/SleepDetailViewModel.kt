@@ -1,12 +1,17 @@
 package com.techmeskills.an16.homework04.sleepdetail
 
 import android.content.Context
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.techmeskills.an16.homework04.database.SleepDatabaseDao
 import com.techmeskills.an16.homework04.database.SleepNight
 import com.techmeskills.an16.homework04.getAppComponent
+import com.techmeskills.an16.homework04.network.Item
+import com.techmeskills.an16.homework04.network.RealEstateService
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 class SleepDetailViewModel (
@@ -22,14 +27,32 @@ class SleepDetailViewModel (
      */
     @Inject
     lateinit var database :SleepDatabaseDao
+    @Inject
+    lateinit var networkService: RealEstateService
 
     private val night: LiveData<SleepNight>
+
+    val list: MutableLiveData<String> = MutableLiveData()
+
+
 
     fun getNight() = night
 
 
     init {
         night = database.getNightWithId(sleepNightKey)
+        list.postValue("lskjdfsldjklsfkj")
+
+        viewModelScope.launch {
+            list.postValue("ldkgjfldfjgdlkfg")
+
+            try {
+                list.postValue(networkService.getData())
+                Log.e("ERROR", networkService.getData())
+            } catch (e: Exception) {
+                list.postValue(e.message)
+            }
+        }
     }
 
     /**

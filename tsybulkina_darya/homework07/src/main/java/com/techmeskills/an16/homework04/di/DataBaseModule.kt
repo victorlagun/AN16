@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.room.Room
 import com.techmeskills.an16.homework04.database.SleepDatabase
 import com.techmeskills.an16.homework04.database.SleepDatabaseDao
+import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -28,4 +29,10 @@ class DataBaseModule(private var context: Context) {
     fun provideDBDao(db:SleepDatabase):SleepDatabaseDao{
         return db.sleepDatabaseDao
     }
+}
+
+@Module(includes = [DataBaseModule::class])
+interface DBBindModule {
+    @Binds
+    fun bindDatabaseDao(databaseDao: SleepDatabaseDao): SleepDatabaseDao
 }
