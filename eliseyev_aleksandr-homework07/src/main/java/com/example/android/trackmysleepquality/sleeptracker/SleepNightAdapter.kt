@@ -14,7 +14,7 @@ import com.example.android.trackmysleepquality.database.SleepNight
 
 
 class SleepNightAdapter: RecyclerView.Adapter<SleepNightAdapter.ViewHolder>() {
-    var data = listOf<SleepNight>()
+    var data =  listOf<SleepNight>()
         set(value) {
             field = value
             notifyDataSetChanged()
