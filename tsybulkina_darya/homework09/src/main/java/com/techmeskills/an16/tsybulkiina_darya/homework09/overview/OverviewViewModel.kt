@@ -30,7 +30,7 @@ import javax.inject.Inject
 /**
  * The [ViewModel] that is attached to the [OverviewFragment].
  */
-class OverviewViewModel : ViewModel() {
+class OverviewViewModel @Inject constructor(val networkService:MarsApiService) : ViewModel() {
 
     enum class MarsApiStatus { LOADING, ERROR, DONE }
 
@@ -45,22 +45,23 @@ class OverviewViewModel : ViewModel() {
     val property: LiveData<List<MarsProperty>>
         get() = _property
 
-    private val _navigateToSelectedProperty = MutableLiveData<MarsProperty>()
-    val navigateToSelectedProperty: LiveData<MarsProperty>
+    private val _navigateToSelectedProperty = MutableLiveData<MarsProperty?>()
+    val navigateToSelectedProperty: LiveData<MarsProperty?>
         get() = _navigateToSelectedProperty
-
-    @Inject
-    lateinit var marsApi: MarsApiService
+//
+//    @Inject
+//    lateinit var networkService: MarsApiService
 
     init {
         getMarsRealEstateProperties(MarsApiFilter.SHOW_ALL)
+
     }
 
     private fun getMarsRealEstateProperties(filter: MarsApiFilter) {
         viewModelScope.launch {
             _status.value = MarsApiStatus.LOADING
             try {
-                _property.value = marsApi.getProperties(filter.value)
+                _property.value = networkService.getProperties(filter.value)
                 _status.value =
                     MarsApiStatus.DONE
 
