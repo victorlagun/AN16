@@ -32,6 +32,8 @@ def modules = [
 
         ':shcherbakov_bogdan-homework01' : 'shcherbakov_bogdan/homework01',
 
+        ':shcherbakov_bogdan-homework02' : 'shcherbakov_bogdan/homework02',
+
         ':staroselets_elena-homework01'  : 'staroselets_elena/homework01',
 
         ':staroselets_elena-homework02'  : 'staroselets_elena/homework02',

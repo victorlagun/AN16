@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Simple List</string>
+    <string name="textview">TextView</string>
+    <string name="add">Добавить</string>
+    <string name="empty">Пусто</string>
+    <string name="name">Введите имя</string>
+    <string name="secondName">Введите фамилию</string>
+    <string name="age">Введите возраст</string>
+    <string name="field">Заполните все!</string>
+    <string name="exist">Уже в списке!</string>
+</resources>
