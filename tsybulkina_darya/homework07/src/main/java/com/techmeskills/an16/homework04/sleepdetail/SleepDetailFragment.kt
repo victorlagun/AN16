@@ -21,7 +21,7 @@ import javax.inject.Inject
 
 class SleepDetailFragment : Fragment() {
 
-    val viewModel: SleepDetailViewModel by viewModels()
+    lateinit var sleepDetailViewModel: SleepDetailViewModel
 
     @Inject
     lateinit var factory: SleepDetailViewModelFactory.Factory
@@ -39,36 +39,40 @@ class SleepDetailFragment : Fragment() {
 
 
         // Get a reference to the ViewModel associated with this fragment.
-//        val sleepDetailViewModel =
-//            ViewModelProvider(
-//                this, factory.create(arguments.sleepNightKey)
-//            ).get(SleepDetailViewModel::class.java)
+         sleepDetailViewModel =
+            ViewModelProvider(
+                this, factory.create(arguments.sleepNightKey)
+            ).get(SleepDetailViewModel::class.java)
 
-        // To use the View Model with data binding, you have to explicitly
-        // give the binding object a reference to it.
-        binding.sleepDetailViewModel = viewModel
+//         To use the View Model with data binding, you have to explicitly
+//         give the binding object a reference to it.
+        binding.sleepDetailViewModel = sleepDetailViewModel
 
         binding.setLifecycleOwner(this)
 
         // Add an Observer to the state variable for Navigating when a Quality icon is tapped.
-        viewModel.navigateToSleepTracker.observe(viewLifecycleOwner, Observer {
+        sleepDetailViewModel.navigateToSleepTracker.observe(viewLifecycleOwner, Observer {
             if (it == true) { // Observed state is true.
                 this.findNavController().navigate(
                     SleepDetailFragmentDirections.actionSleepDetailFragmentToSleepTrackerFragment()
                 )
                 // Reset state to make sure we only navigate once, even if the device
                 // has a configuration change.
-                viewModel.doneNavigating()
+                sleepDetailViewModel.doneNavigating()
             }
         })
+
+        sleepDetailViewModel.list.observe(viewLifecycleOwner) {
+            binding.textView.text = it.toString()
+        }
 
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel.list.observe(viewLifecycleOwner){
-            Log.e("ERROR", it)
+        sleepDetailViewModel.list.observe(viewLifecycleOwner){
+            Log.e("ERROR", it.toString())
         }
     }
 

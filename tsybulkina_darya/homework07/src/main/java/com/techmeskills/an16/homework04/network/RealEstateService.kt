@@ -6,5 +6,5 @@ const val  BASE_URL = "https://android-kotlin-fun-mars-server.appspot.com"
 
 interface RealEstateService {
     @GET("realestate")
-    suspend fun getData(): String
+    suspend fun getData(): List<Item>
 }

@@ -17,7 +17,7 @@ class DataBaseModule(private var context: Context) {
 
     @Provides
     @Singleton
-    fun provideDatabase(context: Context):SleepDatabase{
+    fun provideDatabase(context: Context): SleepDatabase {
         return Room.databaseBuilder(
             context.applicationContext,
             SleepDatabase::class.java,
@@ -26,7 +26,7 @@ class DataBaseModule(private var context: Context) {
     }
 
     @Provides
-    fun provideDBDao(db:SleepDatabase):SleepDatabaseDao{
+    fun provideDBDao(db: SleepDatabase): SleepDatabaseDao {
         return db.sleepDatabaseDao
     }
 }

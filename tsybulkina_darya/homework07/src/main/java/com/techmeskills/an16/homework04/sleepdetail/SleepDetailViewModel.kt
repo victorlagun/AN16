@@ -6,6 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.techmeskills.an16.homework04.database.SleepDatabase
 import com.techmeskills.an16.homework04.database.SleepDatabaseDao
 import com.techmeskills.an16.homework04.database.SleepNight
 import com.techmeskills.an16.homework04.getAppComponent
@@ -16,23 +17,21 @@ import javax.inject.Inject
 
 class SleepDetailViewModel (
     private val context: Context,
+    private val database: SleepDatabaseDao,
+    private val networkService: RealEstateService,
     private val sleepNightKey: Long = 0L,
 ) : ViewModel() {
 
-    init {
-        context.getAppComponent().inject(this)
-    }
+//    init {
+//        context.getAppComponent().inject(this)
+//    }
     /**
      * Hold a reference to SleepDatabase via its SleepDatabaseDao.
      */
-    @Inject
-    lateinit var database :SleepDatabaseDao
-    @Inject
-    lateinit var networkService: RealEstateService
 
     private val night: LiveData<SleepNight>
 
-    val list: MutableLiveData<String> = MutableLiveData()
+    val list: MutableLiveData<List<Item>> = MutableLiveData()
 
 
 
@@ -41,16 +40,13 @@ class SleepDetailViewModel (
 
     init {
         night = database.getNightWithId(sleepNightKey)
-        list.postValue("lskjdfsldjklsfkj")
 
         viewModelScope.launch {
-            list.postValue("ldkgjfldfjgdlkfg")
-
             try {
                 list.postValue(networkService.getData())
-                Log.e("ERROR", networkService.getData())
+                Log.e("ERROR", networkService.getData().toString())
             } catch (e: Exception) {
-                list.postValue(e.message)
+                Log.e("ERROR", e.message.toString())
             }
         }
     }
