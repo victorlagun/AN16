@@ -39,6 +39,9 @@ class SleepTrackerViewModel(
 
     val nights = database.getAllNights()
 
+    private val _navigateToSleepDetail = MutableLiveData<Long>()
+    val navigateToSleepDetail
+        get() = _navigateToSleepDetail
     /**
      * Converted nights to Spanned for displaying.
      */
