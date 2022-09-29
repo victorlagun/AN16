@@ -28,24 +28,26 @@ def modules = [
 
         ':miseyko_denis-homework01'      : 'miseyko_denis/homework01',
 
-        ':miseyko_denis-homework06'      : 'miseyko_denis/homework06',
-
         ':shcherbakov_bogdan-homework01' : 'shcherbakov_bogdan/homework01',
 
         ':shcherbakov_bogdan-homework03' : 'shcherbakov_bogdan/homework03',
 
         ':staroselets_elena-homework01'  : 'staroselets_elena/homework01',
 
+        ':staroselets_elena-homework02'  : 'staroselets_elena/homework02',
+
         ':tsybulkina_darya-homework01'   : 'tsybulkina_darya/homework01',
+
+        ':tsybulkina_darya-homework02'   : 'tsybulkina_darya/homework02',
 
         ':ventserev_aleksandr-homework01': 'ventserev_aleksandr/homework01',
 
         ':verevka_dmitry-homework01'     : 'verevka_dmitry/homework01',
 
         ':lagun_victor-homework01'       : 'lagun_victor/homework01',
-
+        
         ':lagun_victor-homework04'       : 'lagun_victor/homework04',
-
+        
         ':template-homework'             : 'template/homework',
 ]
 

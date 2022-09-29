@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">AN16</string>
+    <string name="error_registration">"Данный пользователь уже зарегистрирован"</string>
+    <string name="empty_field">"Заполните все поля!"</string>
+    <string name="registration">registration</string>
+    <string name="surname">Enter your surname:</string>
+    <string name="name">Enter your name:</string>
+    <string name="age">Enter your age:</string>
+    <string name="registration_message">"Пользователь %1$s зарегистрирован"</string>
 </resources>
